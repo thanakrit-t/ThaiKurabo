@@ -1,0 +1,8 @@
+import Link from "next/link";
+import { ArrowUpRight, BriefcaseBusiness, ClipboardList, Plus } from "lucide-react";
+import { PortalShell } from "@/components/portal-shell";
+import { StatusBadge } from "@/components/status-badge";
+
+export default function MemberDashboard() {
+  return <PortalShell kind="member" title="Good morning, Kanya"><div className="portal-intro"><p>Track your conversations and applications from one clear workspace.</p><div><Link href="/member/contacts/new" className="button button-primary"><Plus size={17} />New contact</Link><Link href="/en/careers" className="button button-secondary">View open roles</Link></div></div><section className="metric-strip"><div><ClipboardList /><span>CONTACT REQUESTS</span><strong>2</strong><small>1 awaiting response</small></div><div><BriefcaseBusiness /><span>JOB APPLICATIONS</span><strong>1</strong><small>Updated 2 days ago</small></div><div className="metric-message"><span>NEXT STEP</span><strong>Complete your profile to make future forms faster.</strong><Link href="/member/profile">Update profile<ArrowUpRight size={16} /></Link></div></section><section className="portal-section"><div className="portal-section-title"><h2>Recent activity</h2><Link href="/member/contacts">View all</Link></div><div className="data-table"><div className="table-head"><span>Reference</span><span>Type</span><span>Submitted</span><span>Status</span></div><Link href="/member/contacts"><strong>TK-C-260081</strong><span>Product enquiry</span><time>20 Aug 2026</time><StatusBadge status="In review" /></Link><Link href="/member/applications"><strong>TK-A-260014</strong><span>Production Engineer</span><time>18 Aug 2026</time><StatusBadge status="Open" /></Link></div></section></PortalShell>;
+}

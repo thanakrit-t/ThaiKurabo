@@ -1,0 +1,79 @@
+export type Locale = "th" | "en" | "ja";
+
+export const locales: Locale[] = ["th", "en", "ja"];
+
+export const copy = {
+  en: {
+    company: "Company",
+    products: "Products",
+    technology: "Technology",
+    sustainability: "Sustainability",
+    news: "News",
+    careers: "Careers",
+    contact: "Contact",
+    login: "Member login",
+    hero: "Precision woven into progress.",
+    intro: "Rooted in Japanese craftsmanship. Built in Thailand with care, technical discipline, and a commitment to what comes next.",
+    primary: "Explore our technology",
+    secondary: "Company profile",
+    storyTitle: "Rooted in Japan. Woven in Thailand.",
+    story: "Thai Kurabo brings together a long textile heritage and hands-on manufacturing expertise. We develop materials with close attention to process, people, and the environments around us.",
+    productTitle: "Textiles made for real-world performance.",
+    innovationTitle: "Development starts with the problem, not the fabric.",
+    sustainabilityTitle: "Responsibility runs through every thread.",
+    careersTitle: "Build what the future will be made from.",
+  },
+  th: {
+    company: "บริษัท",
+    products: "ผลิตภัณฑ์",
+    technology: "เทคโนโลยี",
+    sustainability: "ความยั่งยืน",
+    news: "ข่าวสาร",
+    careers: "ร่วมงานกับเรา",
+    contact: "ติดต่อเรา",
+    login: "เข้าสู่ระบบสมาชิก",
+    hero: "ความแม่นยำ ถักทอสู่ความก้าวหน้า",
+    intro: "รากฐานจากงานฝีมือญี่ปุ่น ผลิตในประเทศไทยด้วยความใส่ใจ วินัยทางเทคนิค และความมุ่งมั่นต่ออนาคต",
+    primary: "สำรวจเทคโนโลยีของเรา",
+    secondary: "รู้จักไทยคูราโบ",
+    storyTitle: "รากฐานจากญี่ปุ่น ถักทอในประเทศไทย",
+    story: "ไทยคูราโบผสานมรดกด้านสิ่งทอเข้ากับความเชี่ยวชาญในการผลิต เราพัฒนาวัสดุโดยใส่ใจในทุกกระบวนการ ผู้คน และสิ่งแวดล้อมรอบตัวเรา",
+    productTitle: "สิ่งทอที่สร้างมาเพื่อการใช้งานจริง",
+    innovationTitle: "การพัฒนาเริ่มจากโจทย์ ไม่ใช่จากผืนผ้า",
+    sustainabilityTitle: "ความรับผิดชอบอยู่ในทุกเส้นใย",
+    careersTitle: "ร่วมสร้างวัสดุแห่งอนาคตไปกับเรา",
+  },
+  ja: {
+    company: "会社情報",
+    products: "製品",
+    technology: "技術・開発",
+    sustainability: "サステナビリティ",
+    news: "ニュース",
+    careers: "採用情報",
+    contact: "お問い合わせ",
+    login: "会員ログイン",
+    hero: "精密さを織り、進歩へ。",
+    intro: "日本のものづくりを原点に、タイの地で技術と誠実さを重ねながら、次の時代へつながるものをつくります。",
+    primary: "技術を見る",
+    secondary: "会社情報",
+    storyTitle: "日本に根ざし、タイで織り上げる。",
+    story: "タイクラボは、繊維の歴史と現場の製造力をひとつにします。工程、人、環境に目を配りながら、新しい素材の可能性を追求しています。",
+    productTitle: "現場で力を発揮するテキスタイル。",
+    innovationTitle: "開発は、生地ではなく課題から始まる。",
+    sustainabilityTitle: "一本の糸から、責任あるものづくりを。",
+    careersTitle: "未来を形づくる素材を、ともにつくる。",
+  },
+} as const;
+
+export const publicSections = [
+  { key: "technology", href: "technology" },
+  { key: "products", href: "products" },
+  { key: "sustainability", href: "sustainability" },
+  { key: "careers", href: "careers" },
+] as const;
+
+export const newsItems = [
+  { date: "18.08.2026", category: "Corporate", title: "Website content is being prepared for launch" },
+  { date: "04.08.2026", category: "Technology", title: "Inside our approach to textile development" },
+  { date: "22.07.2026", category: "Sustainability", title: "Our basic policy for a sustainable society" },
+];
