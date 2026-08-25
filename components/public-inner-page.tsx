@@ -8,6 +8,7 @@ import { copy, type Locale } from '@/lib/site-data';
 import { getPublishedJobs } from '@/lib/data/jobs';
 
 type PageVisual = { src: string; alt: string };
+type DocumentVisual = { src: string; title: string; alt: string };
 type PageInfo = {
   title: string;
   lead: string;
@@ -98,6 +99,22 @@ const companyLeaders = [
   },
 ] as const;
 
+const companyDocuments: readonly DocumentVisual[] = [
+  { src: '/images/company-management-philosophy.png', title: 'Management Philosophy', alt: 'Thai Kurabo management philosophy and company symbol' },
+  { src: '/images/company-group-companies.png', title: 'Group Companies', alt: 'Kurabo group companies and their locations around the world' },
+  { src: '/images/company-location-thailand.png', title: 'Location in Thailand', alt: 'Thai Kurabo offices, factory, and textile development locations in Thailand' },
+  { src: '/images/company-history-1.png', title: 'Company Profile', alt: 'Thai Kurabo company profile and key corporate information' },
+  { src: '/images/company-history-2.png', title: 'Company History', alt: 'Timeline of Thai Kurabo company history' },
+  { src: '/images/company-certifications.png', title: 'Certification', alt: 'Thai Kurabo certifications and industry standards' },
+];
+
+const productionDocuments: readonly DocumentVisual[] = [
+  { src: '/images/products-main-production.png', title: 'Main Production', alt: 'Overview of Thai Kurabo spinning and weaving products' },
+  { src: '/images/products-process-spinning.png', title: 'Production Process — Spinning', alt: 'Thai Kurabo spinning production process from blowing through winding' },
+  { src: '/images/products-process-recycled-fiber.png', title: 'Production Process — Recycle Fiber Machine', alt: 'Thai Kurabo recycled fiber production process' },
+  { src: '/images/products-process-weaving.png', title: 'Production Process — Weaving', alt: 'Thai Kurabo weaving production process from warping through inspection' },
+];
+
 function LeadershipSection() {
   return (
     <section className="leadership-section" aria-labelledby="leadership-title">
@@ -115,6 +132,24 @@ function LeadershipSection() {
     </section>
   );
 }
+function DocumentGallery({ id, title, items }: { id: string; title: string; items: readonly DocumentVisual[] }) {
+  return (
+    <section className="document-gallery" aria-labelledby={id}>
+      <div className="document-gallery-heading">
+        <h2 id={id}>{title}</h2>
+      </div>
+      <div className="document-gallery-grid">
+        {items.map((item) => (
+          <a className="document-panel" href={item.src} target="_blank" rel="noopener noreferrer" key={item.src}>
+            <Image src={item.src} alt={item.alt} width={3508} height={2480} sizes="(max-width: 980px) 100vw, 1240px" />
+            <span className="document-caption"><strong>{item.title}</strong><span>View full size</span></span>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function CustomerSection() {
   return (
     <section className="customer-section" aria-label="Customers">
@@ -188,6 +223,8 @@ export function PublicInnerPage({ locale, slug }: { locale: Locale; slug: string
                   <div><p>{data.lead}</p><p>Final verified copy, detailed specifications, and downloadable resources will be connected through the CMS in a later phase. The current interface establishes the responsive content hierarchy and multilingual layout.</p></div>
                 </div>
               )}
+              {slug === 'company' && <DocumentGallery id="company-profile-title" title="Company profile" items={companyDocuments} />}
+              {slug === 'products' && <DocumentGallery id="production-overview-title" title="Production overview" items={productionDocuments} />}
               {slug === 'company' && <LeadershipSection />}
               {data.visuals && <ImageStory visuals={data.visuals} />}
               {slug === 'company' && <CustomerSection />}
