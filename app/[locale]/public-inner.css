@@ -6,3 +6,10 @@
 @media(hover:hover){.inner-image-story figure:hover img{transform:scale(1.018)}}
 @media(max-width:980px){.inner-image-story{grid-template-columns:1fr}.inner-image-story figure{min-height:min(62vw,520px)}}
 @media(max-width:560px){.inner-image-story figure{min-height:68vw}}
+.contact-intro>p{max-width:52ch;margin:0;color:var(--muted)}
+.contact-locations{margin-top:42px;border-top:1px solid var(--rule);gap:0}
+.contact-locations .location-block{padding:22px 0;border-bottom:1px solid var(--rule)}
+.contact-locations .location-label{color:var(--navy)}
+.contact-locations .location-address{color:var(--muted);font-size:14px}
+.contact-locations .location-phone,.contact-locations .location-map-link{color:var(--blue-deep);font-size:13px;font-weight:700;text-decoration:none}
+.contact-locations .location-phone:hover,.contact-locations .location-map-link:hover{text-decoration:underline}

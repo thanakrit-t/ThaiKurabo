@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CompanyLocations } from "@/components/company-locations";
 import type { Locale } from "@/lib/site-data";
 
 export function SiteFooter({ locale = "th" }: { locale?: Locale }) {
@@ -11,6 +12,7 @@ export function SiteFooter({ locale = "th" }: { locale?: Locale }) {
           <p>Thai Kurabo Co., Ltd.</p>
           <p className="muted">Textile manufacturing and development in Thailand.</p>
         </div>
+        <CompanyLocations className="footer-locations" />
         <div className="footer-links">
           <div><strong>Explore</strong><Link href={`/${locale}/company`}>Company</Link><Link href={`/${locale}/technology`}>Technology</Link><Link href={`/${locale}/products`}>Products</Link></div>
           <div><strong>Connect</strong><Link href={`/${locale}/careers`}>Careers</Link><Link href={`/${locale}/contact`}>Contact</Link><Link href="/member">Member area</Link></div>

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowIcon } from '@/components/icons';
+import { CompanyLocations } from '@/components/company-locations';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import { copy, type Locale } from '@/lib/site-data';
@@ -85,7 +86,11 @@ const pageData: Record<string, PageInfo> = {
 function ContactPreview() {
   return (
     <div className="form-layout">
-      <div><h2>Contact request</h2><p>Sign in before submitting so you can track the response in your member portal.</p></div>
+      <div className="contact-intro">
+        <h2>Contact request</h2>
+        <p>Sign in before submitting so you can track the response in your member portal.</p>
+        <CompanyLocations className="contact-locations" />
+      </div>
       <form className="demo-form">
         <label>Topic<select defaultValue=""><option value="" disabled>Select a topic</option><option>Product enquiry</option><option>Company information</option><option>Other</option></select></label>
         <div className="field-row"><label>First name<input placeholder="Your first name" /></label><label>Last name<input placeholder="Your last name" /></label></div>
