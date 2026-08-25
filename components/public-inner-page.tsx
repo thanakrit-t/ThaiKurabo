@@ -115,6 +115,20 @@ function LeadershipSection() {
     </section>
   );
 }
+function CustomerSection() {
+  return (
+    <section className="customer-section" aria-label="Customers">
+      <Image
+        src="/images/company-customers.png"
+        alt="Customer brands: Uniqlo, Gap, L.L.Bean, Muji, Lacoste, Zara, and Burberry"
+        width={1920}
+        height={1080}
+        sizes="(max-width: 980px) 100vw, 1400px"
+      />
+    </section>
+  );
+}
+
 function ContactPreview() {
   return (
     <div className="form-layout">
@@ -176,6 +190,7 @@ export function PublicInnerPage({ locale, slug }: { locale: Locale; slug: string
               )}
               {slug === 'company' && <LeadershipSection />}
               {data.visuals && <ImageStory visuals={data.visuals} />}
+              {slug === 'company' && <CustomerSection />}
             </>
           )}
         </section>
