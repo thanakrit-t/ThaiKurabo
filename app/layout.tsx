@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import "@fontsource/barlow-condensed/400.css";
 import "@fontsource/barlow-condensed/600.css";
 import "@fontsource/barlow-condensed/700.css";
 import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/600.css";
+import { HtmlLangSync } from "./html-lang-sync";
+import { CookieConsent } from "@/components/cookie-consent";
+import { isLocale } from "@/lib/i18n";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -19,12 +23,17 @@ FIRST VIEWPORT: White navigation above a 44/56 editorial split; oversized headli
 FORM: Precision Loom, selected visual comp; seed 20e92176.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance`;
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const requestedLocale = (await headers()).get("x-page-locale");
+  const locale = isLocale(requestedLocale) ? requestedLocale : "th";
+
   return (
-    <html lang="th">
+    <html lang={locale}>
       <body>
+        <HtmlLangSync />
         <span className="design-contract" data-seed="20e92176" aria-hidden="true">{designContract}</span>
         {children}
+        <CookieConsent />
       </body>
     </html>
   );

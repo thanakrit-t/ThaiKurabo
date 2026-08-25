@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowIcon } from '@/components/icons';
 import { CompanyLocations } from '@/components/company-locations';
+import { CookiePolicy } from '@/components/cookie-policy';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import { copy, type Locale } from '@/lib/site-data';
@@ -80,7 +81,7 @@ const pageData: Record<string, PageInfo> = {
   },
   contact: { title: 'Start a conversation.', lead: 'Tell us what you need and the right team will follow up. Member sign-in is required before submission.' },
   privacy: { title: 'Privacy notice', lead: 'The final legal-approved privacy notice will be published here before launch.' },
-  cookies: { title: 'Cookie policy', lead: 'The final cookie policy and preference controls will be published here before launch.' },
+  cookies: { title: 'Cookie policy', lead: 'Understand the technologies this website uses and control optional cookies at any time.' },
   terms: { title: 'Terms of use', lead: 'The final legal-approved terms will be published here before launch.' },
 };
 
@@ -217,7 +218,7 @@ export function PublicInnerPage({ locale, slug }: { locale: Locale; slug: string
         <section className="inner-content section-shell">
           {slug === 'contact' ? <ContactPreview /> : (
             <>
-              {slug === 'careers' ? <CareersPreview locale={locale} /> : (
+              {slug === 'careers' ? <CareersPreview locale={locale} /> : slug === 'cookies' ? <CookiePolicy locale={locale} /> : (
                 <div className="editorial-copy">
                   <h2>{slug === 'company' ? t.storyTitle : slug === 'technology' ? t.innovationTitle : data.title}</h2>
                   <div><p>{data.lead}</p><p>Final verified copy, detailed specifications, and downloadable resources will be connected through the CMS in a later phase. The current interface establishes the responsive content hierarchy and multilingual layout.</p></div>

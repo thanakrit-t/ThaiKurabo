@@ -1,8 +1,12 @@
-import type { NextRequest } from 'next/server';
+import { NextRequest } from 'next/server';
 import { updateSession } from '@/lib/supabase/proxy';
+import { getLocaleFromPathname } from '@/lib/i18n';
 
 export async function proxy(request: NextRequest) {
-  return updateSession(request);
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set('x-page-locale', getLocaleFromPathname(request.nextUrl.pathname));
+
+  return updateSession(new NextRequest(request, { headers: requestHeaders }));
 }
 
 export const config = {

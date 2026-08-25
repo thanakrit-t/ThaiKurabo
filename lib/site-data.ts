@@ -1,6 +1,4 @@
-export type Locale = "th" | "en" | "ja";
-
-export const locales: Locale[] = ["th", "en", "ja"];
+export { locales, type Locale } from "./i18n";
 
 export const copy = {
   en: {
