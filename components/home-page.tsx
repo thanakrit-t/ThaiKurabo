@@ -52,13 +52,13 @@ export function HomePage({ locale }: { locale: Locale }) {
             <Link href={`/${locale}/company`} className="text-link">{t.secondary}<ArrowIcon /></Link>
           </div>
           <div className="story-image">
-            <Image src="/images/about.png" alt="Thai Kurabo company facilities" fill sizes="(max-width: 900px) 100vw, 40vw" />
+            <Image src="/images/company-facility.png" alt="Thai Kurabo Innovation Center building" fill sizes="(max-width: 900px) 100vw, 40vw" />
           </div>
         </section>
 
         <section className="product-section">
           <div className="product-image">
-            <Image src="/images/factory.jpg" alt="Textile production at Thai Kurabo" fill sizes="(max-width: 900px) 100vw, 50vw" />
+            <Image src="/images/products-spinning.png" alt="Rows of spinning machinery at Thai Kurabo" fill sizes="(max-width: 900px) 100vw, 50vw" />
           </div>
           <div className="product-copy dark-surface">
             <h2 className={isAsian ? "asian-heading" : ""}>{t.productTitle}</h2>
@@ -75,13 +75,13 @@ export function HomePage({ locale }: { locale: Locale }) {
             <Link href={`/${locale}/technology`} className="text-link">{t.technology}<ArrowIcon /></Link>
           </div>
           <div className="innovation-media">
-            <Image src="/images/development.png" alt="Thai Kurabo textile research and development" fill sizes="(max-width: 900px) 100vw, 58vw" />
+            <Image src="/images/technology-material.png" alt="Hands inspecting textile fibers during material development" fill sizes="(max-width: 900px) 100vw, 58vw" />
             <div className="media-note"><span>DEVELOPMENT</span><span>OBSERVE · TEST · REFINE</span></div>
           </div>
         </section>
 
         <section className="sustainability-section section-shell">
-          <div className="sustainability-art"><Image src="/images/sustainability.png" alt="Thai Kurabo sustainability initiatives" fill sizes="(max-width: 900px) 100vw, 44vw" /></div>
+          <div className="sustainability-art"><Image src="/images/sustainability-forest.png" alt="Forest canopy representing responsible manufacturing" fill sizes="(max-width: 900px) 100vw, 44vw" /></div>
           <div className="sustainability-copy">
             <h2 className={isAsian ? "asian-heading" : ""}>{t.sustainabilityTitle}</h2>
             <p>We are preparing verified details about environmental initiatives, people, and governance for publication.</p>

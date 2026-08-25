@@ -92,7 +92,7 @@ h2.asian-heading { font-family: var(--body); font-size: clamp(38px, 4.1vw, 64px)
 .story-copy p, .innovation-copy p, .sustainability-copy p { max-width: 62ch; margin: 0 0 28px; color: var(--muted); font-size: 17px; }
 .text-link { display: inline-flex; align-items: center; gap: 18px; color: var(--blue-deep); font-size: 14px; font-weight: 700; text-decoration: none; }
 .story-image { position: relative; min-height: 430px; overflow: hidden; }
-.story-image img, .product-image img, .innovation-media img, .sustainability-art img { object-fit: cover; }
+.story-image img, .product-image img, .innovation-media img, .sustainability-art img { object-fit: cover; filter: saturate(.82) contrast(1.04); }
 .product-section { display: grid; grid-template-columns: 1.15fr .85fr; min-height: 680px; }
 .product-image { position: relative; min-height: 560px; }
 .dark-surface { background: var(--navy); color: white; }
@@ -110,7 +110,7 @@ h2.asian-heading { font-family: var(--body); font-size: clamp(38px, 4.1vw, 64px)
 .media-note { position: absolute; left: 0; right: 0; bottom: 0; background: rgba(6,27,57,.94); color: white; display: flex; justify-content: space-between; padding: 14px 18px; font-family: var(--display); letter-spacing: .08em; }
 .sustainability-section { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(60px, 9vw, 150px); align-items: center; padding-bottom: clamp(110px, 14vw, 210px); }
 .sustainability-art { position: relative; min-height: 520px; background: white; }
-.sustainability-art img { object-fit: contain; padding: 28px; }
+.sustainability-art img { object-position: center; }
 .news-section { padding-bottom: clamp(110px, 13vw, 190px); }
 .section-title-row { display: flex; justify-content: space-between; align-items: end; border-bottom: 1px solid var(--navy); padding-bottom: 26px; }
 .section-title-row h2 { font-size: clamp(50px, 4vw, 70px); }
