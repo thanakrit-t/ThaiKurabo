@@ -21,8 +21,8 @@ const pageData: Record<string, PageInfo> = {
   company: {
     title: 'Rooted in Japan. Growing with Thailand.',
     lead: 'Discover our origins, philosophy, people, and the manufacturing foundation behind Thai Kurabo.',
-    image: '/images/company-facility.png',
-    imageAlt: 'Thai Kurabo Innovation Center building',
+    image: '/images/company-factory-top-view.png',
+    imageAlt: 'Aerial view of the Thai Kurabo factory and rooftop solar panels',
     visuals: [
       { src: '/images/company-warehouse.png', alt: 'Finished textile materials stored inside Thai Kurabo' },
       { src: '/images/company-production.png', alt: 'Thai Kurabo team handling finished yarn in production' },
