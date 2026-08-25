@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { HeroBackgroundVideo } from "@/components/hero-background-video";
 import { ArrowIcon } from "@/components/icons";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -26,7 +27,8 @@ export function HomePage({ locale }: { locale: Locale }) {
             </div>
           </div>
           <div className="hero-media">
-            <Image src="/images/technology-hero.png" alt="Thai Kurabo textile manufacturing technology" fill priority sizes="(max-width: 900px) 100vw, 56vw" />
+            <HeroBackgroundVideo />
+            <div className="hero-video-wash" aria-hidden="true" />
             <div className="image-index"><span>TK</span><span>TECH / 01</span></div>
           </div>
           <div className="punch-rail" aria-label="Featured sections">
