@@ -83,6 +83,38 @@ const pageData: Record<string, PageInfo> = {
   terms: { title: 'Terms of use', lead: 'The final legal-approved terms will be published here before launch.' },
 };
 
+const companyLeaders = [
+  {
+    src: '/images/leadership-president.png',
+    name: 'MR. ATSUHIKO NISHIZAWA',
+    role: 'Thai Kurabo President',
+    alt: 'Portrait and message from MR. ATSUHIKO NISHIZAWA, Thai Kurabo President',
+  },
+  {
+    src: '/images/leadership-factory-manager.png',
+    name: 'MR. MINORU NAKAMURA',
+    role: 'Factory Manager',
+    alt: 'Portrait and message from MR. MINORU NAKAMURA, Factory Manager',
+  },
+] as const;
+
+function LeadershipSection() {
+  return (
+    <section className="leadership-section" aria-labelledby="leadership-title">
+      <div className="leadership-heading">
+        <h2 id="leadership-title">Leadership</h2>
+      </div>
+      <div className="leadership-panels">
+        {companyLeaders.map((leader) => (
+          <figure className="leader-panel" key={leader.name}>
+            <Image src={leader.src} alt={leader.alt} width={1920} height={1080} sizes="(max-width: 980px) 100vw, 1240px" />
+            <figcaption><strong>{leader.name}</strong><span>{leader.role}</span></figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+  );
+}
 function ContactPreview() {
   return (
     <div className="form-layout">
@@ -142,6 +174,7 @@ export function PublicInnerPage({ locale, slug }: { locale: Locale; slug: string
                   <div><p>{data.lead}</p><p>Final verified copy, detailed specifications, and downloadable resources will be connected through the CMS in a later phase. The current interface establishes the responsive content hierarchy and multilingual layout.</p></div>
                 </div>
               )}
+              {slug === 'company' && <LeadershipSection />}
               {data.visuals && <ImageStory visuals={data.visuals} />}
             </>
           )}
