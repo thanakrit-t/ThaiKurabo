@@ -18,6 +18,81 @@ type PageInfo = {
   visuals?: PageVisual[];
 };
 
+type SustainabilityContent = {
+  title: string;
+  description: string;
+  pillars: { label: string; title: string; body: string }[];
+  certificationsTitle: string;
+  certificationsBody: string;
+  certificationsNote: string;
+  certificationsAlt: string;
+  progressTitle: string;
+  milestones: { year: string; label: string }[];
+};
+
+const sustainabilityContent: Record<Locale, SustainabilityContent> = {
+  en: {
+    title: 'Responsible manufacturing for today and tomorrow',
+    description: 'We focus on resources, energy, quality, safety, and traceability to build a business that grows together with society.',
+    pillars: [
+      { label: 'Environment', title: 'Using resources wisely', body: 'Solar power, natural gas, and process improvements help reduce manufacturing loss.' },
+      { label: 'Circularity', title: 'Keeping materials in motion', body: 'Fiber recycling machinery supports material recovery and the development of circular products.' },
+      { label: 'People & Safety', title: 'Quality begins with people', body: 'Training, safety, and a culture of continuous improvement underpin our manufacturing standards.' },
+    ],
+    certificationsTitle: 'Standards that support traceability',
+    certificationsBody: 'Our Company Profile lists important certifications and material programs including GRS, GOTS, OCS, BCI, Cotton USA, and regenagri, reflecting our approach to materials and traceability.',
+    certificationsNote: "Use of certification marks in public materials is subject to each standard's requirements.",
+    certificationsAlt: 'Thai Kurabo standards and certifications',
+    progressTitle: 'Efficiency milestones',
+    milestones: [
+      { year: '2010', label: 'Natural gas introduced as fuel' },
+      { year: '2021', label: 'Energy-efficiency improvement program' },
+      { year: '2023', label: 'Solar panels installed' },
+      { year: '2024', label: 'Fiber recycling machinery added' },
+    ],
+  },
+  th: {
+    title: 'การผลิตที่รับผิดชอบต่อวันนี้และวันข้างหน้า',
+    description: 'เราให้ความสำคัญกับทรัพยากร พลังงาน คุณภาพ ความปลอดภัย และการตรวจสอบย้อนกลับ เพื่อพัฒนาธุรกิจที่เติบโตควบคู่กับสังคม',
+    pillars: [
+      { label: 'Environment', title: 'ใช้ทรัพยากรอย่างคุ้มค่า', body: 'พลังงานแสงอาทิตย์ การใช้ก๊าซธรรมชาติ และการพัฒนากระบวนการที่ช่วยลดการสูญเสียจากการผลิต' },
+      { label: 'Circularity', title: 'สร้างวงจรให้วัสดุ', body: 'เครื่องจักรรีไซเคิลเส้นใยสนับสนุนการนำวัตถุดิบกลับมาใช้ใหม่และการพัฒนาผลิตภัณฑ์หมุนเวียน' },
+      { label: 'People & Safety', title: 'คุณภาพเริ่มจากคน', body: 'การฝึกอบรม ความปลอดภัย และวัฒนธรรมการปรับปรุงอย่างต่อเนื่อง คือรากฐานของมาตรฐานการผลิต' },
+    ],
+    certificationsTitle: 'มาตรฐานที่ช่วยยืนยันแหล่งที่มา',
+    certificationsBody: 'ข้อมูล Company Profile ระบุการรับรองและโครงการวัตถุดิบสำคัญ เช่น GRS, GOTS, OCS, BCI, Cotton USA และ regenagri ซึ่งสะท้อนแนวทางด้านวัตถุดิบและการตรวจสอบย้อนกลับ',
+    certificationsNote: 'การใช้งานเครื่องหมายรับรองบนสื่อสาธารณะควรเป็นไปตามเงื่อนไขของแต่ละมาตรฐาน',
+    certificationsAlt: 'มาตรฐานและการรับรองของ Thai Kurabo',
+    progressTitle: 'หมุดหมายด้านประสิทธิภาพ',
+    milestones: [
+      { year: '2010', label: 'เริ่มใช้ก๊าซธรรมชาติเป็นเชื้อเพลิง' },
+      { year: '2021', label: 'ดำเนินโครงการเปลี่ยนระบบแสงสว่างเป็น LED แล้วเสร็จ' },
+      { year: '2023', label: 'ติดตั้งแผงพลังงานแสงอาทิตย์' },
+      { year: '2024', label: 'เพิ่มเครื่องจักรรีไซเคิลเส้นใย' },
+    ],
+  },
+  ja: {
+    title: '今日と未来に責任を持つものづくり',
+    description: '資源、エネルギー、品質、安全、トレーサビリティを重視し、社会とともに成長する事業を目指します。',
+    pillars: [
+      { label: 'Environment', title: '資源を大切に使う', body: '太陽光発電、天然ガス、工程改善により、生産ロスの低減を進めます。' },
+      { label: 'Circularity', title: '素材を循環させる', body: '繊維リサイクル設備によって素材の再利用と循環型製品の開発を支えます。' },
+      { label: 'People & Safety', title: '品質は人から始まる', body: '教育、安全、継続的改善の文化が、ものづくりの基盤です。' },
+    ],
+    certificationsTitle: 'トレーサビリティを支える基準',
+    certificationsBody: '会社案内にはGRS、GOTS、OCS、BCI、Cotton USA、regenagriなどの認証・原料プログラムを掲載しています。',
+    certificationsNote: '認証マークの公開利用には、各基準の条件が適用されます。',
+    certificationsAlt: '認証と基準',
+    progressTitle: '効率化の歩み',
+    milestones: [
+      { year: '2010', label: '天然ガスを導入' },
+      { year: '2021', label: '省エネルギー改善プロジェクト' },
+      { year: '2023', label: '太陽光パネルを設置' },
+      { year: '2024', label: '繊維リサイクル設備を増設' },
+    ],
+  },
+};
+
 const pageData: Record<string, PageInfo> = {
   company: {
     title: 'Rooted in Japan. Growing with Thailand.',
@@ -203,9 +278,80 @@ function ImageStory({ visuals }: { visuals: PageVisual[] }) {
   );
 }
 
+function SustainabilityPage({ locale }: { locale: Locale }) {
+  const content = sustainabilityContent[locale];
+
+  return (
+    <main id="main" className="sustainability-page" lang={locale}>
+      <section className="sustainability-page-hero">
+        <div className="sustainability-page-shell sustainability-page-hero-inner">
+          <div>
+            <p className="sustainability-page-eyebrow">SUSTAINABILITY</p>
+            <h1>{content.title}</h1>
+          </div>
+          <p>{content.description}</p>
+        </div>
+      </section>
+
+      <section className="sustainability-page-section sustainability-page-shell" aria-label="Sustainability pillars">
+        <div className="sustainability-pillar-grid">
+          {content.pillars.map((pillar, index) => (
+            <article key={pillar.label}>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <h2>{pillar.label}</h2>
+              <h3>{pillar.title}</h3>
+              <p>{pillar.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="sustainability-page-section sustainability-certification-section">
+        <div className="sustainability-page-shell sustainability-certification-story">
+          <div className="sustainability-certification-copy">
+            <p className="sustainability-page-eyebrow">CERTIFICATIONS</p>
+            <h2>{content.certificationsTitle}</h2>
+            <p>{content.certificationsBody}</p>
+            <p className="sustainability-note">{content.certificationsNote}</p>
+          </div>
+          <div className="sustainability-certification-media">
+            <Image src="/images/company-certifications.png" alt={content.certificationsAlt} fill sizes="(max-width: 900px) 100vw, 50vw" />
+          </div>
+        </div>
+      </section>
+
+      <section className="sustainability-page-section sustainability-page-shell">
+        <div className="sustainability-progress-heading">
+          <p className="sustainability-page-eyebrow">PROGRESS</p>
+          <h2>{content.progressTitle}</h2>
+        </div>
+        <div className="sustainability-progress-grid">
+          {content.milestones.map((milestone) => (
+            <div key={milestone.year}>
+              <strong>{milestone.year}</strong>
+              <span>{milestone.label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
+}
+
 export function PublicInnerPage({ locale, slug }: { locale: Locale; slug: string }) {
   const t = copy[locale];
   const data: PageInfo = pageData[slug] ?? { title: 'Content in preparation', lead: 'This page is part of the approved sitemap and is ready for final content.' };
+
+  if (slug === 'sustainability') {
+    return (
+      <>
+        <SiteHeader locale={locale} />
+        <SustainabilityPage locale={locale} />
+        <SiteFooter locale={locale} />
+      </>
+    );
+  }
+
   return (
     <>
       <SiteHeader locale={locale} />
