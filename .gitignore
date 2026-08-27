@@ -2,6 +2,9 @@
 .superpowers/
 
 .next/
+dist/
+.wrangler/
+.sites-publish-worktree/
 node_modules/
 .env*
 !.env.example
