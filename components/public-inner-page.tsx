@@ -361,7 +361,7 @@ function CompanyPage({ locale }: { locale: Locale }) {
           {content.milestones.map((milestone) => <div key={milestone.year}><strong>{milestone.year}</strong><span>{milestone.label}</span></div>)}
         </div>
         <div className="company-wide-media">
-          <Image src="/images/company-milestones.jpg" alt={content.historyAlt} fill sizes="100vw" />
+          <Image src="/images/company-history-2.png" alt={content.historyAlt} fill sizes="100vw" />
         </div>
       </section>
 
