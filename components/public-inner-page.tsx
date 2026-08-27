@@ -376,8 +376,8 @@ function CompanyPage({ locale }: { locale: Locale }) {
               {content.locations.map((location) => <p key={location.label}><strong>{location.label}:</strong> {location.address}</p>)}
             </div>
           </div>
-          <div className="company-media-frame">
-            <Image src="/images/company-locations.jpg" alt={content.locationsAlt} fill sizes="(max-width: 900px) 100vw, 50vw" />
+          <div className="company-media-frame company-location-media">
+            <Image src="/images/company-location-thailand.png" alt={content.locationsAlt} fill sizes="(max-width: 900px) 100vw, 50vw" />
           </div>
         </div>
       </section>

@@ -58,6 +58,7 @@
 .company-parent-link:hover{background:var(--blue);color:#fff}
 .company-media-frame,.company-wide-media{position:relative;overflow:hidden;background:var(--paper)}
 .company-media-frame{aspect-ratio:1.34;border-radius:4px 42px;box-shadow:24px 24px #e6f1f4}
+.company-location-media{aspect-ratio:3508/2480}
 .company-media-frame img,.company-wide-media img{object-fit:cover}
 .company-facts-section{padding-block:90px;background:var(--ground)}
 .company-fact-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:45px;border-top:1px solid #ccd7df;border-left:1px solid #ccd7df}
