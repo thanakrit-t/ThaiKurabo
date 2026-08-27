@@ -148,8 +148,8 @@ const pageData: Record<string, PageInfo> = {
   careers: {
     title: 'Make the future tangible.',
     lead: 'Explore opportunities to grow with a team focused on craft, technology, and responsible manufacturing.',
-    image: '/images/company-warehouse.png',
-    imageAlt: 'Textile warehouse and production environment at Thai Kurabo',
+    image: '/images/topview2.png',
+    imageAlt: 'Aerial view of the Thai Kurabo manufacturing facility',
     visuals: [
       { src: '/images/company-production.png', alt: 'Production team working with finished yarn' },
       { src: '/images/company-facility.png', alt: 'Thai Kurabo Innovation Center workplace' },
