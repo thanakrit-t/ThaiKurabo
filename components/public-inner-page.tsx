@@ -305,7 +305,7 @@ function CompanyPage({ locale }: { locale: Locale }) {
           <a className="company-parent-link" href={kuraboUrl} target="_blank" rel="noreferrer">{content.parentLink}</a>
         </div>
         <div className="company-media-frame">
-          <Image src="/images/company-group-network.jpg" alt={content.parentAlt} fill sizes="(max-width: 900px) 100vw, 50vw" />
+          <Image src="/images/company-group-companies.png" alt={content.parentAlt} fill sizes="(max-width: 900px) 100vw, 50vw" />
         </div>
       </section>
 
