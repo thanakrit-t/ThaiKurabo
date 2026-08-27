@@ -5,6 +5,7 @@ import { CompanyLocations } from '@/components/company-locations';
 import { CookiePolicy } from '@/components/cookie-policy';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
+import { companyContent } from '@/lib/company-page-content';
 import { copy, type Locale } from '@/lib/site-data';
 import { getPublishedJobs } from '@/lib/data/jobs';
 
@@ -278,6 +279,89 @@ function ImageStory({ visuals }: { visuals: PageVisual[] }) {
   );
 }
 
+function CompanyPage({ locale }: { locale: Locale }) {
+  const content = companyContent[locale];
+  const kuraboUrl = locale === 'en' ? 'https://www.kurabo.co.jp/english/' : 'https://www.kurabo.co.jp/';
+
+  return (
+    <main id="main" className="company-page" lang={locale}>
+      <section className="company-page-hero">
+        <div className="company-page-shell company-page-hero-inner">
+          <div>
+            <p className="company-page-eyebrow company-page-eyebrow-light">ABOUT THAI KURABO</p>
+            <h1>{content.heroTitle}</h1>
+          </div>
+          <p>{content.heroDescription}</p>
+        </div>
+      </section>
+
+      <section className="company-page-section company-page-shell company-story">
+        <div>
+          <div className="company-section-heading">
+            <p className="company-page-eyebrow">OUR PARENT COMPANY</p>
+            <h2>{content.parentTitle}</h2>
+          </div>
+          {content.parentParagraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          <a className="company-parent-link" href={kuraboUrl} target="_blank" rel="noreferrer">{content.parentLink}</a>
+        </div>
+        <div className="company-media-frame">
+          <Image src="/images/company-group-network.jpg" alt={content.parentAlt} fill sizes="(max-width: 900px) 100vw, 50vw" />
+        </div>
+      </section>
+
+      <section className="company-facts-section">
+        <div className="company-page-shell">
+          <div className="company-section-heading">
+            <p className="company-page-eyebrow">COMPANY PROFILE</p>
+            <h2>{content.profileTitle}</h2>
+          </div>
+          <div className="company-fact-grid">
+            {content.facts.map((fact) => <div key={`${fact.value}-${fact.label}`}><strong>{fact.value}</strong><span>{fact.label}</span></div>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="company-page-section company-philosophy">
+        <div className="company-page-shell company-philosophy-inner">
+          <p className="company-page-eyebrow company-page-eyebrow-light">MANAGEMENT PHILOSOPHY</p>
+          <blockquote>The Kurabo Group contributes to a better future through the creation of new value.</blockquote>
+          <p>{content.philosophy}</p>
+        </div>
+      </section>
+
+      <section className="company-page-section company-page-shell">
+        <div className="company-section-heading">
+          <p className="company-page-eyebrow">MILESTONES</p>
+          <h2>{content.journeyTitle}</h2>
+        </div>
+        <div className="company-timeline">
+          {content.milestones.map((milestone) => <div key={milestone.year}><strong>{milestone.year}</strong><span>{milestone.label}</span></div>)}
+        </div>
+        <div className="company-wide-media">
+          <Image src="/images/company-milestones.jpg" alt={content.historyAlt} fill sizes="100vw" />
+        </div>
+      </section>
+
+      <section className="company-page-section company-locations-section">
+        <div className="company-page-shell company-story">
+          <div>
+            <div className="company-section-heading">
+              <p className="company-page-eyebrow">OUR LOCATIONS</p>
+              <h2>{content.locationsTitle}</h2>
+            </div>
+            <div className="company-location-list">
+              {content.locations.map((location) => <p key={location.label}><strong>{location.label}:</strong> {location.address}</p>)}
+            </div>
+          </div>
+          <div className="company-media-frame">
+            <Image src="/images/company-locations.jpg" alt={content.locationsAlt} fill sizes="(max-width: 900px) 100vw, 50vw" />
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+
 function SustainabilityPage({ locale }: { locale: Locale }) {
   const content = sustainabilityContent[locale];
 
@@ -341,6 +425,16 @@ function SustainabilityPage({ locale }: { locale: Locale }) {
 export function PublicInnerPage({ locale, slug }: { locale: Locale; slug: string }) {
   const t = copy[locale];
   const data: PageInfo = pageData[slug] ?? { title: 'Content in preparation', lead: 'This page is part of the approved sitemap and is ready for final content.' };
+
+  if (slug === 'company') {
+    return (
+      <>
+        <SiteHeader locale={locale} />
+        <CompanyPage locale={locale} />
+        <SiteFooter locale={locale} />
+      </>
+    );
+  }
 
   if (slug === 'sustainability') {
     return (
