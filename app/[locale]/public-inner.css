@@ -69,6 +69,10 @@
 .company-philosophy-inner{text-align:center}
 .company-philosophy blockquote{max-width:980px;margin:22px auto;color:#fff;font-size:clamp(2rem,4vw,4rem);line-height:1.3;letter-spacing:-.035em}
 .company-philosophy-inner>p:last-child{color:#bfd0dc}
+.company-leadership-section{background:var(--ground)}
+.company-leadership-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,2vw,24px)}
+.company-leadership-card{overflow:hidden;background:var(--paper);border:1px solid var(--rule)}
+.company-leadership-card img{display:block;width:100%;height:auto}
 .company-timeline{display:grid;grid-template-columns:repeat(7,1fr);margin-top:46px;overflow-x:auto}
 .company-timeline div{position:relative;min-width:140px;padding:24px 18px;border-top:3px solid #31a9c5}
 .company-timeline div::before{content:"";position:absolute;width:12px;height:12px;top:-8px;left:18px;border-radius:50%;background:var(--navy)}

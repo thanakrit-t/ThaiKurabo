@@ -329,6 +329,29 @@ function CompanyPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
+      <section className="company-page-section company-leadership-section" aria-label="Company leadership">
+        <div className="company-page-shell company-leadership-grid">
+          <div className="company-leadership-card">
+            <Image
+              src="/images/leadership-president.png"
+              alt="President of Thai Kurabo"
+              width={1920}
+              height={1080}
+              sizes="(max-width: 900px) 50vw, 590px"
+            />
+          </div>
+          <div className="company-leadership-card">
+            <Image
+              src="/images/leadership-factory-manager.png"
+              alt="Factory Manager of Thai Kurabo"
+              width={1920}
+              height={1080}
+              sizes="(max-width: 900px) 50vw, 590px"
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="company-page-section company-page-shell">
         <div className="company-section-heading">
           <p className="company-page-eyebrow">MILESTONES</p>
