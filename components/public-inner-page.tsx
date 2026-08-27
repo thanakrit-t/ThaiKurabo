@@ -393,6 +393,24 @@ function CompanyPage({ locale }: { locale: Locale }) {
           </div>
         </div>
       </section>
+
+      <section className="company-page-section company-brands-section" aria-labelledby="trusted-brands-title">
+        <div className="company-page-shell">
+          <div className="company-brands-heading">
+            <h2 id="trusted-brands-title">Trusted by leading brands</h2>
+          </div>
+          <div className="company-brands-media">
+            <Image
+              src="/images/company-customers.png"
+              alt="Customer brands: Uniqlo, Gap, L.L.Bean, Muji, Lacoste, Zara, and Burberry"
+              width={1920}
+              height={1080}
+              quality={90}
+              sizes="(max-width: 900px) 100vw, 1180px"
+            />
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
