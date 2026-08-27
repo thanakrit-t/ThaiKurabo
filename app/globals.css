@@ -178,7 +178,7 @@ h2.asian-heading { font-family: var(--body); font-size: clamp(38px, 4.1vw, 64px)
 
 .site-footer { background: #03132a; color: white; padding: 70px clamp(24px, 6vw, 100px) 20px; }
 .footer-main { max-width: 1440px; margin: auto; display: grid; grid-template-columns: .72fr 1.05fr 1.23fr; gap: clamp(40px, 5vw, 80px); }
-.footer-logo { width: 190px; height: auto; filter: brightness(0) invert(1); opacity: .92; }
+.footer-company-logo { display: block; width: min(255px, 100%); height: auto; }
 .site-footer p { margin: 20px 0 0; }.site-footer .muted { margin-top: 5px; color: #aebfd0; font-size: 14px; }
 .company-locations { display: grid; gap: 28px; }
 .company-locations address { font-style: normal; }

@@ -8,7 +8,13 @@ export function SiteFooter({ locale = "th" }: { locale?: Locale }) {
     <footer className="site-footer">
       <div className="footer-main">
         <div>
-          <Image src="/brand/kurabo-logo.png" width={226} height={70} alt="KURABO" className="footer-logo" />
+          <Image
+            src="/brand/c_logo.png"
+            width={255}
+            height={40}
+            alt="Thai Kurabo"
+            className="footer-company-logo"
+          />
           <p>Thai Kurabo Co., Ltd.</p>
           <p className="muted">Textile manufacturing and development in Thailand.</p>
         </div>
