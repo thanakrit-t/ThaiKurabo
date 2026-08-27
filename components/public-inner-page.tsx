@@ -304,8 +304,14 @@ function CompanyPage({ locale }: { locale: Locale }) {
           {content.parentParagraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           <a className="company-parent-link" href={kuraboUrl} target="_blank" rel="noreferrer">{content.parentLink}</a>
         </div>
-        <div className="company-media-frame">
-          <Image src="/images/company-group-companies.png" alt={content.parentAlt} fill sizes="(max-width: 900px) 100vw, 50vw" />
+        <div className="company-media-frame company-document-media">
+          <Image
+            src="/images/company-group-companies.png"
+            alt={content.parentAlt}
+            fill
+            quality={90}
+            sizes="(max-width: 900px) 100vw, 59vw"
+          />
         </div>
       </section>
 
@@ -376,8 +382,14 @@ function CompanyPage({ locale }: { locale: Locale }) {
               {content.locations.map((location) => <p key={location.label}><strong>{location.label}:</strong> {location.address}</p>)}
             </div>
           </div>
-          <div className="company-media-frame company-location-media">
-            <Image src="/images/company-location-thailand.png" alt={content.locationsAlt} fill sizes="(max-width: 900px) 100vw, 50vw" />
+          <div className="company-media-frame company-document-media">
+            <Image
+              src="/images/company-location-thailand.png"
+              alt={content.locationsAlt}
+              fill
+              quality={90}
+              sizes="(max-width: 900px) 100vw, 59vw"
+            />
           </div>
         </div>
       </section>
