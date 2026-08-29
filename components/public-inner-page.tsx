@@ -265,9 +265,13 @@ function ThaiProductsPage() {
         </div></section>
 
         <section className="products-section products-shell">
-          <p className="products-eyebrow">WEAVING PROCESS</p><h2>กระบวนการทอผ้า<br />: ตั้งแต่การเตรียมเส้นด้ายจนถึงการตรวจสอบคุณภาพ</h2><p>กระบวนการผลิตผ้าทอประกอบด้วย 5 ขั้นตอนหลัก</p>
+          <p className="products-eyebrow">WEAVING PROCESS</p><h2>กระบวนการทอผ้า<br />ตั้งแต่การเตรียมเส้นด้าย<br />จนถึงการตรวจสอบคุณภาพ</h2><p>กระบวนการผลิตผ้าทอประกอบด้วย 5 ขั้นตอนหลัก</p>
           <ol className="products-process-grid products-process-five"><li><strong>Warping</strong><span>จัดเตรียมเส้นด้ายยืนตามจำนวนและความยาวที่กำหนด</span></li><li><strong>Sizing</strong><span>เคลือบหรือเตรียมเส้นด้ายยืนเพื่อช่วยให้เหมาะกับกระบวนการทอ</span></li><li><strong>Drawing</strong><span>ร้อยและจัดเส้นด้ายเข้าสู่ชุดควบคุมของเครื่องทอ</span></li><li><strong>Weaving</strong><span>ทอเส้นด้ายยืนและเส้นด้ายพุ่งให้เป็นผ้าตามโครงสร้างที่ออกแบบ</span></li><li><strong>Inspecting</strong><span>ตรวจสอบคุณภาพผ้าหลังการทอ ก่อนส่งต่อไปยังกระบวนการถัดไป</span></li></ol>
           <p>สำหรับกระบวนการย้อมและตกแต่งสำเร็จ สามารถดำเนินการร่วมกับบริษัทในกลุ่ม TTDF ในประเทศไทยตามข้อมูลกระบวนการผลิตของบริษัท</p><Link className="products-text-link" href="/th/technology">เรียนรู้เพิ่มเติมเกี่ยวกับเทคโนโลยี <ArrowIcon /></Link>
+          <div className="products-weaving-gallery" aria-label="ภาพกระบวนการทอผ้าและตรวจสอบคุณภาพ">
+            <figure><Image src="/images/products-weaving-machine.png" alt="กระบวนการทอผ้าด้วยเครื่องจักรของ Thai Kurabo" width={1536} height={1024} sizes="(max-width: 900px) 100vw, 50vw" /></figure>
+            <figure><Image src="/images/products-weaving-inspection.jpg" alt="กระบวนการตรวจสอบคุณภาพผ้าทอของ Thai Kurabo" width={1536} height={1024} sizes="(max-width: 900px) 100vw, 50vw" /></figure>
+          </div>
         </section>
 
         <section className="products-section products-choice-section"><div className="products-shell products-choice-grid"><div><p className="products-eyebrow">MATERIAL SELECTION</p><h2>เลือกวัสดุสิ่งทอให้เหมาะกับผลิตภัณฑ์ของคุณ</h2></div><div><p>การเลือกเส้นด้ายหรือผ้าที่เหมาะสมควรพิจารณาหลายปัจจัยร่วมกัน เช่น ประเภทเส้นใย เบอร์ด้าย น้ำหนักผ้า โครงสร้างการทอ ความยืดหยุ่น สัมผัส สี การตกแต่งสำเร็จ และมาตรฐานที่ผลิตภัณฑ์ปลายทางต้องปฏิบัติตาม</p><p>ทีมงาน Thai Kurabo พร้อมรับข้อมูลความต้องการของลูกค้า เพื่อร่วมพิจารณาประเภทเส้นด้ายและผ้าทอที่เหมาะสมกับแนวคิดผลิตภัณฑ์และกระบวนการผลิต</p></div></div></section>
