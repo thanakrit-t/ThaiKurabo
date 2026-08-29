@@ -148,8 +148,8 @@ const pageData: Record<string, PageInfo> = {
   careers: {
     title: 'Make the future tangible.',
     lead: 'Explore opportunities to grow with a team focused on craft, technology, and responsible manufacturing.',
-    image: '/images/topview2.png',
-    imageAlt: 'Aerial view of the Thai Kurabo manufacturing facility',
+    image: '/images/careers-topview1.jpg',
+    imageAlt: 'Aerial view of the Thai Kurabo factory for the careers page',
     visuals: [
       { src: '/images/company-production.png', alt: 'Production team working with finished yarn' },
       { src: '/images/company-facility.png', alt: 'Thai Kurabo Innovation Center workplace' },
@@ -269,8 +269,9 @@ function ThaiProductsPage() {
           <ol className="products-process-grid products-process-five"><li><strong>Warping</strong><span>จัดเตรียมเส้นด้ายยืนตามจำนวนและความยาวที่กำหนด</span></li><li><strong>Sizing</strong><span>เคลือบหรือเตรียมเส้นด้ายยืนเพื่อช่วยให้เหมาะกับกระบวนการทอ</span></li><li><strong>Drawing</strong><span>ร้อยและจัดเส้นด้ายเข้าสู่ชุดควบคุมของเครื่องทอ</span></li><li><strong>Weaving</strong><span>ทอเส้นด้ายยืนและเส้นด้ายพุ่งให้เป็นผ้าตามโครงสร้างที่ออกแบบ</span></li><li><strong>Inspecting</strong><span>ตรวจสอบคุณภาพผ้าหลังการทอ ก่อนส่งต่อไปยังกระบวนการถัดไป</span></li></ol>
           <p>สำหรับกระบวนการย้อมและตกแต่งสำเร็จ สามารถดำเนินการร่วมกับบริษัทในกลุ่ม TTDF ในประเทศไทยตามข้อมูลกระบวนการผลิตของบริษัท</p><Link className="products-text-link" href="/th/technology">เรียนรู้เพิ่มเติมเกี่ยวกับเทคโนโลยี <ArrowIcon /></Link>
           <div className="products-weaving-gallery" aria-label="ภาพกระบวนการทอผ้าและตรวจสอบคุณภาพ">
-            <figure><Image src="/images/products-weaving-machine.png" alt="กระบวนการทอผ้าด้วยเครื่องจักรของ Thai Kurabo" width={1536} height={1024} sizes="(max-width: 900px) 100vw, 50vw" /></figure>
-            <figure><Image src="/images/products-weaving-inspection.jpg" alt="กระบวนการตรวจสอบคุณภาพผ้าทอของ Thai Kurabo" width={1536} height={1024} sizes="(max-width: 900px) 100vw, 50vw" /></figure>
+            <figure><Image src="/images/products-weaving-machine.png" alt="กระบวนการทอผ้าด้วยเครื่องจักรของ Thai Kurabo" width={1536} height={1024} sizes="(max-width: 900px) 100vw, 33vw" /></figure>
+            <figure><Image src="/images/products-weaving-machine-2.png" alt="เครื่องจักรในกระบวนการทอผ้าของ Thai Kurabo" width={1536} height={1024} sizes="(max-width: 900px) 100vw, 33vw" /></figure>
+            <figure><Image src="/images/products-weaving-inspection.jpg" alt="กระบวนการตรวจสอบคุณภาพผ้าทอของ Thai Kurabo" width={1536} height={1024} sizes="(max-width: 900px) 100vw, 33vw" /></figure>
           </div>
         </section>
 
