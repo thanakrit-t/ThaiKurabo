@@ -111,7 +111,7 @@ const pageData: Record<string, PageInfo> = {
     image: '/images/products-spinning.png',
     imageAlt: 'Rows of spinning machinery at Thai Kurabo',
     visuals: [
-      { src: '/images/products-cotton.png', alt: 'Cotton fibers before textile production' },
+      { src: '/images/products-winding-thread.jpg', alt: 'Thread winding process at Thai Kurabo' },
       { src: '/images/products-cone-winder.png', alt: 'Automatic cone winding machines in operation' },
     ],
   },
@@ -240,7 +240,7 @@ function ThaiProductsPage() {
             </ul>
             <p>ความหลากหลายของชนิดและเบอร์ด้ายช่วยให้ลูกค้าสามารถเลือกวัสดุให้เหมาะกับน้ำหนักผ้า สัมผัส ลวดลาย และคุณสมบัติของผลิตภัณฑ์ปลายทางได้อย่างยืดหยุ่น</p>
           </div>
-          <figure className="products-sticky-media"><Image src="/images/products-cotton.png" alt="เส้นใยฝ้ายสำหรับผลิตเส้นด้ายของ Thai Kurabo" width={1200} height={900} sizes="(max-width: 900px) 100vw, 42vw" /></figure>
+          <figure className="products-sticky-media"><Image src="/images/products-winding-thread.jpg" alt="กระบวนการกรอเส้นด้ายของ Thai Kurabo" width={1536} height={1024} sizes="(max-width: 900px) 100vw, 42vw" /></figure>
         </section>
 
         <section className="products-section products-process-section"><div className="products-shell">
