@@ -92,3 +92,56 @@
 .company-brands-media img{display:block;width:100%;height:auto}
 @media(max-width:900px){.company-page-hero-inner,.company-story{grid-template-columns:1fr}.company-fact-grid{grid-template-columns:1fr 1fr}.company-media-frame{width:calc(100% - 24px)}}
 @media(max-width:600px){.company-page-shell{width:min(100% - 30px,1180px)}.company-page-hero{padding-block:76px}.company-page-hero h1{font-size:clamp(2.7rem,13vw,4rem)}.company-fact-grid{grid-template-columns:1fr}.company-fact-grid div{min-height:130px}.company-media-frame{border-radius:4px 28px;box-shadow:14px 14px #e6f1f4}.company-timeline{margin-inline:-15px;padding-inline:15px}}
+
+/* Thai Products — long-form SEO article. */
+.products-page{background:var(--paper)}
+.products-shell{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+.products-hero{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(420px,.92fr);min-height:680px}
+.products-hero-copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(80px,8vw,130px) clamp(28px,6vw,96px)}
+.products-hero-copy>p:first-child,.products-eyebrow{margin:0 0 18px;color:var(--blue);font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.products-hero h1{max-width:900px;margin:0;color:var(--navy);font-family:var(--body);font-size:clamp(2.8rem,4.6vw,4.8rem);font-weight:650;line-height:1.12;letter-spacing:-.045em;text-wrap:balance}
+.products-hero-lead{max-width:68ch;margin:30px 0 0;color:var(--muted);font-size:1.04rem;line-height:1.85}
+.products-hero-image{position:relative;min-height:680px;overflow:hidden;background:var(--surface)}
+.products-hero-image img{object-fit:cover;filter:saturate(.82) contrast(1.04)}
+.products-article p{color:var(--muted);font-size:1.02rem;line-height:1.9}
+.products-intro{padding-block:clamp(70px,8vw,112px);border-bottom:1px solid var(--rule)}
+.products-intro p{max-width:950px;margin:0;color:var(--navy);font-size:clamp(1.3rem,2.15vw,2rem);line-height:1.65}
+.products-section{padding-block:clamp(78px,9vw,132px)}
+.products-section h2,.products-cta h2{margin:0 0 30px;color:var(--navy);font-family:var(--body);font-size:clamp(2.2rem,4vw,4rem);font-weight:650;line-height:1.16;letter-spacing:-.04em;text-transform:none}
+.products-section>p{max-width:850px}
+.products-split{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);align-items:start;gap:clamp(50px,7vw,96px)}
+.products-sticky-media{position:sticky;top:110px;margin:0;overflow:hidden;border-radius:4px 34px;background:var(--surface)}
+.products-sticky-media img{display:block;width:100%;height:auto}
+.products-spec-list{margin:32px 0;padding:0;list-style:none;border-top:1px solid var(--navy)}
+.products-spec-list li{display:grid;grid-template-columns:minmax(190px,.75fr) 1.25fr;gap:24px;padding:20px 0;border-bottom:1px solid var(--rule)}
+.products-spec-list strong{color:var(--navy);line-height:1.55}
+.products-spec-list span{color:var(--muted);line-height:1.7}
+.products-process-section,.products-choice-section{background:var(--ground)}
+.products-process-grid{display:grid;grid-template-columns:repeat(4,1fr);margin:45px 0 36px;padding:0;list-style:none;counter-reset:product-step}
+.products-process-grid li{min-height:190px;padding:24px;border-top:3px solid var(--blue);border-right:1px solid var(--rule);counter-increment:product-step}
+.products-process-grid li::before{content:counter(product-step,decimal-leading-zero);display:block;margin-bottom:34px;color:var(--blue);font-size:.75rem;font-weight:800;letter-spacing:.12em}
+.products-process-grid strong,.products-process-grid span{display:block}
+.products-process-grid strong{margin-bottom:9px;color:var(--navy);font-size:1.2rem}
+.products-process-grid span{color:var(--muted);line-height:1.6}
+.products-process-five{grid-template-columns:repeat(5,1fr)}
+.products-text-link{display:inline-flex;align-items:center;gap:15px;margin-top:18px;color:var(--blue-deep);font-weight:750;text-decoration:none}
+.products-text-link svg,.products-cta svg{width:20px}
+.products-weaving-section{background:#061b39}
+.products-weaving-section h2,.products-weaving-section .products-spec-list strong{color:#fff}
+.products-weaving-section p,.products-weaving-section .products-spec-list span{color:#c4d2df}
+.products-weaving-section .products-spec-list{border-top-color:#fff}
+.products-weaving-section .products-spec-list li{border-bottom-color:#354861}
+.products-choice-grid{display:grid;grid-template-columns:1fr .85fr;gap:clamp(50px,9vw,130px)}
+.products-faq-list{margin-top:42px;border-top:1px solid var(--navy)}
+.products-faq-list details{border-bottom:1px solid var(--rule)}
+.products-faq-list summary{position:relative;padding:25px 50px 25px 0;color:var(--navy);font-size:1.1rem;font-weight:700;cursor:pointer;list-style:none}
+.products-faq-list summary::-webkit-details-marker{display:none}
+.products-faq-list summary::after{content:"+";position:absolute;right:8px;color:var(--blue);font-size:1.6rem;font-weight:400}
+.products-faq-list details[open] summary::after{content:"−"}
+.products-faq-list details p{max-width:850px;margin:0;padding:0 50px 25px 0}
+.products-cta{padding-block:clamp(80px,10vw,140px);background:linear-gradient(115deg,#051b3d,#082a5e 70%,#087db5);color:#fff}
+.products-cta h2{max-width:850px;color:#fff}
+.products-cta p:not(.products-eyebrow){max-width:730px;color:#cbd9e5}
+.products-cta a{display:inline-flex;align-items:center;gap:18px;margin-top:22px;padding:14px 22px;background:#fff;color:var(--navy);font-weight:800;text-decoration:none}
+@media(max-width:900px){.products-hero,.products-split,.products-choice-grid{grid-template-columns:1fr}.products-hero-image{min-height:58vw}.products-sticky-media{position:relative;top:auto}.products-split-reverse>figure{order:2}.products-process-grid,.products-process-five{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.products-shell{width:min(100% - 30px,1180px)}.products-hero-copy{padding-inline:20px}.products-hero h1{font-size:clamp(2.55rem,12vw,3.5rem)}.products-hero-image{min-height:72vw}.products-spec-list li{grid-template-columns:1fr;gap:5px}.products-process-grid,.products-process-five{grid-template-columns:1fr}.products-process-grid li{min-height:0}.products-process-grid li::before{margin-bottom:18px}}

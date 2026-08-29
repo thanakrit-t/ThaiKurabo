@@ -192,6 +192,94 @@ const productionDocuments: readonly DocumentVisual[] = [
   { src: '/images/products-process-weaving.png', title: 'Production Process — Weaving', alt: 'Thai Kurabo weaving production process from warping through inspection' },
 ];
 
+const productFaqs = [
+  { question: 'Thai Kurabo ผลิตเส้นด้ายประเภทใดบ้าง?', answer: 'ผลิตภัณฑ์ประกอบด้วยเส้นด้ายฝ้าย เส้นด้ายฝ้ายผสมใยสังเคราะห์ และเส้นด้ายชนิดพิเศษ เช่น Compact Yarn, Slub Yarn, Stretch Yarn, Siro Spun Yarn, Multiple Folded Yarn และ Recycled Fiber Blended Yarn' },
+  { question: 'Thai Kurabo ผลิตผ้าทอแบบใดบ้าง?', answer: 'บริษัทผลิตผ้าฝ้าย ผ้าใยสังเคราะห์ ผ้าเส้นใยผสม และผ้ายืด โดยรองรับโครงสร้าง Plain, Twill, Sateen, Dobby และ Fancy Cloth' },
+  { question: 'สามารถสอบถามการผลิตตามความต้องการเฉพาะได้หรือไม่?', answer: 'ลูกค้าสามารถส่งรายละเอียดการใช้งาน ประเภทเส้นใย เบอร์ด้าย โครงสร้างผ้า และคุณสมบัติที่ต้องการให้ทีมงานพิจารณาความเหมาะสมและความเป็นไปได้ในการผลิต' },
+  { question: 'มีผลิตภัณฑ์ที่ใช้เส้นใยรีไซเคิลหรือไม่?', answer: 'Thai Kurabo มีผลิตภัณฑ์ Recycled Fiber Blended Yarn และมีกระบวนการเตรียมเส้นใยรีไซเคิล สำหรับสัดส่วนและคุณสมบัติเฉพาะควรสอบถามทีมงานตามข้อกำหนดของแต่ละผลิตภัณฑ์' },
+] as const;
+
+function ThaiProductsPage() {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: productFaqs.map(({ question, answer }) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })),
+  };
+
+  return (
+    <main id="main" className="products-page" lang="th">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <section className="products-hero">
+        <div className="products-hero-copy technical-surface">
+          <p>THAI KURABO / ผลิตภัณฑ์</p>
+          <h1>ผลิตภัณฑ์เส้นด้ายและผ้าทอที่พัฒนาเพื่อตอบโจทย์การใช้งานจริง</h1>
+          <p className="products-hero-lead">Thai Kurabo Co., Ltd. เป็นผู้ผลิตเส้นด้ายและผ้าทอในประเทศไทย ครอบคลุมตั้งแต่การปั่นเส้นด้ายฝ้าย เส้นด้ายผสม และเส้นด้ายชนิดพิเศษ ไปจนถึงการทอผ้าหลากหลายโครงสร้างสำหรับการนำไปพัฒนาเป็นเครื่องแต่งกาย สิ่งทอสำหรับบ้าน และผลิตภัณฑ์สิ่งทอประเภทต่าง ๆ</p>
+        </div>
+        <div className="products-hero-image"><Image src="/images/products-spinning.png" alt="กระบวนการปั่นเส้นด้ายของ Thai Kurabo" fill priority sizes="(max-width: 900px) 100vw, 46vw" /></div>
+      </section>
+
+      <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/th">หน้าหลัก</Link><span>/</span><span>ผลิตภัณฑ์</span></nav>
+
+      <article className="products-article">
+        <section className="products-intro products-shell"><p>เราให้ความสำคัญกับการเลือกใช้วัตถุดิบ กระบวนการผลิตที่เป็นระบบ และการตรวจสอบคุณภาพในแต่ละขั้นตอน เพื่อให้ได้วัสดุสิ่งทอที่มีคุณสมบัติสอดคล้องกับความต้องการของลูกค้า ไม่ว่าจะเป็นด้านสัมผัส ความแข็งแรง ความยืดหยุ่น รูปลักษณ์ หรือความเหมาะสมต่อกระบวนการผลิตขั้นต่อไป</p></section>
+
+        <section className="products-section products-shell products-split">
+          <div>
+            <p className="products-eyebrow">SPINNING PRODUCTS</p><h2>ผลิตภัณฑ์เส้นด้าย</h2>
+            <p>Thai Kurabo ผลิตเส้นด้ายหลายประเภท เพื่อรองรับการออกแบบเนื้อผ้าและการใช้งานที่แตกต่างกัน ได้แก่</p>
+            <ul className="products-spec-list">
+              <li><strong>เส้นด้ายฝ้าย (Cotton Yarn)</strong><span>รองรับเบอร์ด้ายตั้งแต่ Ne 6/1 ถึง Ne 100/1</span></li>
+              <li><strong>เส้นด้ายฝ้ายผสมใยสังเคราะห์ (Cotton Synthetic Blended Yarn)</strong><span>รองรับเบอร์ด้ายตั้งแต่ Ne 16/1 ถึง Ne 80/1</span></li>
+              <li><strong>Compact Yarn</strong><span>เส้นด้ายที่มีโครงสร้างกระชับ เหมาะกับงานที่ต้องการพื้นผิวเรียบร้อยและคุณภาพสม่ำเสมอ</span></li>
+              <li><strong>Manufactured Slub Yarn</strong><span>เส้นด้ายที่สร้างมิติและลวดลายเฉพาะบนเนื้อผ้า</span></li>
+              <li><strong>Layered Yarn</strong><span>เส้นด้ายแบบหลายชั้นสำหรับพัฒนาคุณสมบัติของผ้า</span></li>
+              <li><strong>Stretch Yarn</strong><span>เส้นด้ายสำหรับผ้าที่ต้องการความยืดหยุ่นและการเคลื่อนไหวที่คล่องตัว</span></li>
+              <li><strong>Siro Spun Yarn</strong><span>เส้นด้ายที่ผลิตด้วยเทคนิคการปั่นเพื่อให้ได้โครงสร้างและลักษณะเฉพาะ</span></li>
+              <li><strong>Multiple Folded Yarn</strong><span>เส้นด้ายควบหลายเส้นสำหรับงานที่ต้องการโครงสร้างด้ายแตกต่างจากเส้นเดี่ยว</span></li>
+              <li><strong>Recycled Fiber Blended Yarn</strong><span>เส้นด้ายผสมเส้นใยรีไซเคิล เป็นอีกทางเลือกสำหรับการพัฒนาผลิตภัณฑ์สิ่งทอที่คำนึงถึงการใช้ทรัพยากร</span></li>
+            </ul>
+            <p>ความหลากหลายของชนิดและเบอร์ด้ายช่วยให้ลูกค้าสามารถเลือกวัสดุให้เหมาะกับน้ำหนักผ้า สัมผัส ลวดลาย และคุณสมบัติของผลิตภัณฑ์ปลายทางได้อย่างยืดหยุ่น</p>
+          </div>
+          <figure className="products-sticky-media"><Image src="/images/products-cotton.png" alt="เส้นใยฝ้ายสำหรับผลิตเส้นด้ายของ Thai Kurabo" width={1200} height={900} sizes="(max-width: 900px) 100vw, 42vw" /></figure>
+        </section>
+
+        <section className="products-section products-process-section"><div className="products-shell">
+          <p className="products-eyebrow">SPINNING PROCESS</p><h2>กระบวนการผลิตเส้นด้ายที่ควบคุมอย่างเป็นระบบ</h2>
+          <p>กระบวนการปั่นด้ายของ Thai Kurabo ประกอบด้วยขั้นตอนสำคัญตั้งแต่การเตรียมเส้นใยจนได้เส้นด้ายพร้อมใช้งาน</p>
+          <ol className="products-process-grid">
+            <li><strong>Blowing</strong><span>เปิด ผสม และทำความสะอาดเส้นใยเบื้องต้น</span></li><li><strong>Carding</strong><span>จัดเรียงเส้นใยและกำจัดสิ่งปนเปื้อนที่ยังหลงเหลือ</span></li><li><strong>Combing</strong><span>คัดเส้นใยสั้นและจัดแนวเส้นใยให้สม่ำเสมอยิ่งขึ้นตามชนิดของด้าย</span></li><li><strong>Drawing</strong><span>รวมและยืดเส้นใยเพื่อปรับความสม่ำเสมอ</span></li><li><strong>Roving</strong><span>ลดขนาดและเตรียมเส้นใยก่อนเข้าสู่การปั่น</span></li><li><strong>Spinning</strong><span>ปั่นเส้นใยให้เป็นเส้นด้ายตามขนาดและโครงสร้างที่กำหนด</span></li><li><strong>Winding</strong><span>กรอเส้นด้ายและเตรียมสำหรับการตรวจสอบหรือส่งต่อสู่กระบวนการทอ</span></li>
+          </ol>
+          <p>การควบคุมแต่ละขั้นตอนมีส่วนสำคัญต่อความสม่ำเสมอ ความแข็งแรง และคุณภาพโดยรวมของเส้นด้าย ซึ่งส่งผลโดยตรงต่อประสิทธิภาพในกระบวนการทอและคุณภาพของผ้าสำเร็จ</p>
+        </div></section>
+
+        <section className="products-section products-shell products-split products-split-reverse">
+          <figure className="products-sticky-media"><Image src="/images/products-process-recycled-fiber.png" alt="กระบวนการเตรียมเส้นใยรีไซเคิลของ Thai Kurabo" width={3508} height={2480} sizes="(max-width: 900px) 100vw, 42vw" /></figure>
+          <div><p className="products-eyebrow">RECYCLED FIBER</p><h2>เส้นใยรีไซเคิลสำหรับการใช้ทรัพยากรอย่างคุ้มค่า</h2><p>Thai Kurabo มีกระบวนการเตรียมเส้นใยรีไซเคิล โดยนำวัสดุที่เหมาะสมเข้าสู่ขั้นตอน Cutting, Recycle, Carding และ Blowroom เพื่อแปรสภาพกลับเป็นเส้นใยสำหรับใช้เป็นส่วนผสมในการผลิตเส้นด้าย</p><p>แนวทางนี้ช่วยเพิ่มทางเลือกในการใช้วัตถุดิบและสนับสนุนการพัฒนาผลิตภัณฑ์สิ่งทอที่พิจารณาการใช้ทรัพยากรอย่างมีประสิทธิภาพ ทั้งนี้ สัดส่วนเส้นใยและคุณสมบัติของด้ายควรกำหนดตามวัตถุประสงค์ของผลิตภัณฑ์และข้อกำหนดของลูกค้าแต่ละราย</p><Link className="products-text-link" href="/th/sustainability">ดูแนวทางด้านความยั่งยืน <ArrowIcon /></Link></div>
+        </section>
+
+        <section className="products-section products-weaving-section"><div className="products-shell products-split">
+          <div><p className="products-eyebrow">WEAVING PRODUCTS</p><h2>ผลิตภัณฑ์ผ้าทอ</h2><p>ในส่วนของการทอผ้า Thai Kurabo สามารถผลิตผ้าจากเส้นใยและโครงสร้างที่หลากหลาย ได้แก่ ผ้าฝ้าย ผ้าใยสังเคราะห์ ผ้าเส้นใยผสม และผ้ายืด พร้อมรองรับรูปแบบการทอหลัก เช่น</p>
+            <ul className="products-spec-list"><li><strong>Plain</strong><span>โครงสร้างทอพื้นฐานที่มีความเรียบและใช้งานได้หลากหลาย</span></li><li><strong>Twill</strong><span>โครงสร้างลายทแยง เหมาะกับผ้าที่ต้องการบุคลิกและความทนทาน</span></li><li><strong>Sateen</strong><span>โครงสร้างที่ช่วยสร้างพื้นผิวเรียบและลักษณะเงางาม</span></li><li><strong>Dobby</strong><span>การทอที่สร้างลวดลายหรือพื้นผิวบนผ้า</span></li><li><strong>Fancy Cloth</strong><span>ผ้าที่พัฒนาให้มีลักษณะพิเศษตามแนวคิดการออกแบบและการใช้งาน</span></li></ul>
+            <p>ผ้าทอเหล่านี้สามารถนำไปต่อยอดเป็นเสื้อผ้า กางเกง แจ็กเก็ต เดนิม และสิ่งทอสำหรับบ้าน รวมถึงผลิตภัณฑ์อื่นตามความเหมาะสมของโครงสร้างผ้า</p></div>
+          <figure className="products-sticky-media"><Image src="/images/products-main-production.png" alt="ผลิตภัณฑ์เส้นด้ายและผ้าทอของ Thai Kurabo" width={3508} height={2480} sizes="(max-width: 900px) 100vw, 42vw" /></figure>
+        </div></section>
+
+        <section className="products-section products-shell">
+          <p className="products-eyebrow">WEAVING PROCESS</p><h2>กระบวนการทอผ้าตั้งแต่การเตรียมด้ายถึงการตรวจสอบ</h2><p>กระบวนการผลิตผ้าทอประกอบด้วย 5 ขั้นตอนหลัก</p>
+          <ol className="products-process-grid products-process-five"><li><strong>Warping</strong><span>จัดเตรียมเส้นด้ายยืนตามจำนวนและความยาวที่กำหนด</span></li><li><strong>Sizing</strong><span>เคลือบหรือเตรียมเส้นด้ายยืนเพื่อช่วยให้เหมาะกับกระบวนการทอ</span></li><li><strong>Drawing</strong><span>ร้อยและจัดเส้นด้ายเข้าสู่ชุดควบคุมของเครื่องทอ</span></li><li><strong>Weaving</strong><span>ทอเส้นด้ายยืนและเส้นด้ายพุ่งให้เป็นผ้าตามโครงสร้างที่ออกแบบ</span></li><li><strong>Inspecting</strong><span>ตรวจสอบคุณภาพผ้าหลังการทอ ก่อนส่งต่อไปยังกระบวนการถัดไป</span></li></ol>
+          <p>สำหรับกระบวนการย้อมและตกแต่งสำเร็จ สามารถดำเนินการร่วมกับบริษัทในกลุ่ม TTDF ในประเทศไทยตามข้อมูลกระบวนการผลิตของบริษัท</p><Link className="products-text-link" href="/th/technology">เรียนรู้เพิ่มเติมเกี่ยวกับเทคโนโลยี <ArrowIcon /></Link>
+        </section>
+
+        <section className="products-section products-choice-section"><div className="products-shell products-choice-grid"><div><p className="products-eyebrow">MATERIAL SELECTION</p><h2>เลือกวัสดุสิ่งทอให้เหมาะกับผลิตภัณฑ์ของคุณ</h2></div><div><p>การเลือกเส้นด้ายหรือผ้าที่เหมาะสมควรพิจารณาหลายปัจจัยร่วมกัน เช่น ประเภทเส้นใย เบอร์ด้าย น้ำหนักผ้า โครงสร้างการทอ ความยืดหยุ่น สัมผัส สี การตกแต่งสำเร็จ และมาตรฐานที่ผลิตภัณฑ์ปลายทางต้องปฏิบัติตาม</p><p>ทีมงาน Thai Kurabo พร้อมรับข้อมูลความต้องการของลูกค้า เพื่อร่วมพิจารณาประเภทเส้นด้ายและผ้าทอที่เหมาะสมกับแนวคิดผลิตภัณฑ์และกระบวนการผลิต</p></div></div></section>
+
+        <section className="products-section products-shell products-faq" aria-labelledby="products-faq-title"><p className="products-eyebrow">FAQ</p><h2 id="products-faq-title">คำถามที่พบบ่อย</h2><div className="products-faq-list">{productFaqs.map(({ question, answer }) => <details key={question}><summary>{question}</summary><p>{answer}</p></details>)}</div></section>
+
+        <section className="products-cta"><div className="products-shell"><p className="products-eyebrow">CONTACT THAI KURABO</p><h2>กำลังมองหาผู้ผลิตเส้นด้ายและผ้าทอในประเทศไทย?</h2><p>ติดต่อ Thai Kurabo เพื่อสอบถามรายละเอียดผลิตภัณฑ์ คุณสมบัติทางเทคนิค ปริมาณการสั่งผลิต และเงื่อนไขการพัฒนาผลิตภัณฑ์ร่วมกัน</p><Link href="/th/contact">ติดต่อเรา <ArrowIcon /></Link></div></section>
+      </article>
+    </main>
+  );
+}
+
 function LeadershipSection() {
   return (
     <section className="leadership-section" aria-labelledby="leadership-title">
@@ -494,6 +582,16 @@ export function PublicInnerPage({ locale, slug }: { locale: Locale; slug: string
       <>
         <SiteHeader locale={locale} />
         <SustainabilityPage locale={locale} />
+        <SiteFooter locale={locale} />
+      </>
+    );
+  }
+
+  if (slug === 'products' && locale === 'th') {
+    return (
+      <>
+        <SiteHeader locale={locale} />
+        <ThaiProductsPage />
         <SiteFooter locale={locale} />
       </>
     );
