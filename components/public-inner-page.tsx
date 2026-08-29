@@ -285,6 +285,186 @@ function ThaiProductsPage() {
   );
 }
 
+const internationalProductContent = {
+  en: {
+    home: 'Home', products: 'Products',
+    heroTitle: 'Yarn and woven fabrics developed for real-world applications',
+    heroLead: 'Thai Kurabo Co., Ltd. is a yarn and woven fabric manufacturer in Thailand. Our capabilities range from cotton, blended, and specialty yarn spinning to a variety of woven structures for apparel, home textiles, and other textile products.',
+    heroAlt: 'Yarn spinning process at Thai Kurabo',
+    intro: 'We focus on material selection, systematic manufacturing, and quality checks at every stage. The result is textile material aligned with customer requirements for hand feel, strength, stretch, appearance, and suitability for downstream production.',
+    yarnTitle: 'Spinning products',
+    yarnIntro: 'Thai Kurabo produces a broad selection of yarns for different fabric designs and applications, including:',
+    yarnItems: [
+      ['Cotton Yarn', 'Available from Ne 6/1 to Ne 100/1'],
+      ['Cotton Synthetic Blended Yarn', 'Available from Ne 16/1 to Ne 80/1'],
+      ['Compact Yarn', 'A compact yarn structure suited to clean surfaces and consistent quality'],
+      ['Manufactured Slub Yarn', 'Creates distinctive dimension and pattern in the fabric'],
+      ['Layered Yarn', 'A multilayer yarn for developing specific fabric properties'],
+      ['Stretch Yarn', 'Designed for fabrics that need stretch and freedom of movement'],
+      ['Siro Spun Yarn', 'Spun with a technique that gives the yarn a distinctive structure and character'],
+      ['Multiple Folded Yarn', 'Multiple yarns folded together for structures different from single yarn'],
+      ['Recycled Fiber Blended Yarn', 'A recycled-fiber blend that offers another resource-conscious product option'],
+    ],
+    yarnOutro: 'The range of yarn types and counts gives customers flexibility to select materials for the desired fabric weight, touch, pattern, and end-product performance.',
+    windingAlt: 'Thread winding process at Thai Kurabo',
+    spinningTitle: 'A systematically controlled spinning process',
+    spinningIntro: 'Thai Kurabo’s spinning process covers the essential stages from fiber preparation to yarn ready for use.',
+    spinningSteps: [
+      ['Blowing', 'Open, blend, and initially clean the fibers'], ['Carding', 'Align fibers and remove remaining impurities'], ['Combing', 'Remove short fibers and improve alignment where required'], ['Drawing', 'Combine and draw fibers to improve uniformity'], ['Roving', 'Reduce the strand and prepare it for spinning'], ['Spinning', 'Spin fibers to the specified yarn count and structure'], ['Winding', 'Wind and prepare yarn for inspection or weaving'],
+    ],
+    spinningOutro: 'Control at every stage contributes to yarn consistency, strength, and overall quality, directly supporting weaving efficiency and finished-fabric quality.',
+    recycledTitle: 'Recycled fiber for more efficient resource use',
+    recycledBody1: 'Thai Kurabo prepares recycled fiber by processing suitable material through Cutting, Recycle, Carding, and Blowroom stages, returning it to fiber form for use in blended yarn.',
+    recycledBody2: 'This approach broadens material options and supports textile development that considers resource efficiency. Fiber ratios and yarn properties should be defined for each product objective and customer specification.',
+    recycledAlt: 'Recycled fiber preparation process at Thai Kurabo',
+    sustainabilityLink: 'Explore our sustainability approach',
+    weavingTitle: 'Weaving products',
+    weavingIntro: 'Thai Kurabo produces cotton, synthetic, blended, and stretch fabrics in a variety of structures, including:',
+    weavingItems: [['Plain', 'A versatile, smooth basic weave'], ['Twill', 'A diagonal structure for character and durability'], ['Sateen', 'A structure that creates a smooth surface and subtle sheen'], ['Dobby', 'A weave that creates pattern or texture'], ['Fancy Cloth', 'Special fabrics developed around design concepts and applications']],
+    weavingOutro: 'These woven fabrics can be developed into shirts, trousers, jackets, denim, home textiles, and other products suited to their construction.',
+    weavingMainAlt: 'Thai Kurabo yarn and woven fabric products',
+    weavingProcessTitle: ['The weaving process', 'from yarn preparation', 'to quality inspection'],
+    weavingProcessIntro: 'Woven fabric production consists of five main stages.',
+    weavingSteps: [['Warping', 'Prepare warp yarns to the specified number and length'], ['Sizing', 'Coat or prepare warp yarns for weaving'], ['Drawing', 'Thread and arrange yarns through the loom control elements'], ['Weaving', 'Interlace warp and weft yarns in the designed structure'], ['Inspecting', 'Inspect woven fabric before the next process']],
+    weavingProcessBody: 'Dyeing and finishing can be coordinated with TTDF group companies in Thailand in line with the company’s production process information.',
+    technologyLink: 'Learn more about our technology',
+    galleryLabel: 'Weaving and quality inspection process images',
+    galleryAlts: ['Weaving machinery in operation at Thai Kurabo', 'Machinery in the Thai Kurabo weaving process', 'Woven fabric quality inspection at Thai Kurabo'],
+    choiceTitle: 'Choose the right textile material for your product',
+    choiceBody1: 'Selecting the right yarn or fabric involves fiber type, yarn count, fabric weight, weave, stretch, hand feel, color, finishing, and the standards required by the end product.',
+    choiceBody2: 'The Thai Kurabo team is ready to review your requirements and help identify yarn and woven fabric options suited to your product concept and production process.',
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      ['What types of yarn does Thai Kurabo produce?', 'Our products include cotton yarn, cotton-synthetic blended yarn, and specialty yarns such as Compact Yarn, Slub Yarn, Stretch Yarn, Siro Spun Yarn, Multiple Folded Yarn, and Recycled Fiber Blended Yarn.'],
+      ['What types of woven fabric does Thai Kurabo produce?', 'We produce cotton, synthetic, blended, and stretch fabrics in Plain, Twill, Sateen, Dobby, and Fancy Cloth structures.'],
+      ['Can I inquire about custom production?', 'Customers can provide the intended application, fiber type, yarn count, fabric structure, and required properties for our team to assess suitability and production feasibility.'],
+      ['Are recycled-fiber products available?', 'Thai Kurabo offers Recycled Fiber Blended Yarn and has a recycled-fiber preparation process. Please contact our team about ratios and properties for each product specification.'],
+    ],
+    ctaTitle: 'Looking for a yarn and woven fabric manufacturer in Thailand?',
+    ctaBody: 'Contact Thai Kurabo for product details, technical properties, production quantities, and collaborative product-development terms.',
+    contact: 'Contact us',
+  },
+  ja: {
+    home: 'ホーム', products: '製品情報',
+    heroTitle: '実用ニーズに応える糸と織物製品',
+    heroLead: 'Thai Kurabo Co., Ltd.は、タイで糸と織物を製造しています。綿糸、混紡糸、特殊糸の紡績から、多様な組織の織物まで、衣料、ホームテキスタイル、各種繊維製品に向けた素材を提供しています。',
+    heroAlt: 'Thai Kuraboの紡績工程',
+    intro: '原料の選定、体系的な生産工程、各段階での品質確認を重視し、風合い、強度、伸縮性、外観、後工程への適性など、お客様の要件に沿った繊維素材づくりに取り組んでいます。',
+    yarnTitle: '紡績製品',
+    yarnIntro: '生地設計や用途の違いに対応するため、Thai Kuraboでは次のような多様な糸を生産しています。',
+    yarnItems: [
+      ['綿糸（Cotton Yarn）', 'Ne 6/1からNe 100/1まで対応'], ['綿・合成繊維混紡糸', 'Ne 16/1からNe 80/1まで対応'], ['Compact Yarn', '毛羽が少なく、均一で整った表面が求められる用途に適した糸'], ['Manufactured Slub Yarn', '生地に独自の凹凸や表情を生み出す糸'], ['Layered Yarn', '生地特性を高めるための多層構造糸'], ['Stretch Yarn', '伸縮性と動きやすさが必要な生地向けの糸'], ['Siro Spun Yarn', '独自の構造と特性を生み出す紡績技術による糸'], ['Multiple Folded Yarn', '単糸とは異なる構造を得るために複数の糸を撚り合わせた糸'], ['Recycled Fiber Blended Yarn', '資源利用に配慮した再生繊維混紡糸'],
+    ],
+    yarnOutro: '多様な糸種と番手により、生地の重量、風合い、柄、最終製品に求められる性能に合わせて柔軟に素材を選択できます。',
+    windingAlt: 'Thai Kuraboの糸巻き工程',
+    spinningTitle: '体系的に管理された紡績工程',
+    spinningIntro: 'Thai Kuraboの紡績工程は、繊維の準備から使用可能な糸になるまでの重要な段階で構成されています。',
+    spinningSteps: [['Blowing', '繊維を開繊・混合し、初期洗浄を行う'], ['Carding', '繊維をそろえ、残った不純物を除去する'], ['Combing', '必要に応じて短繊維を除去し、繊維方向をさらに整える'], ['Drawing', '繊維束を合わせて延伸し、均一性を高める'], ['Roving', '繊維束を細くし、紡績に備える'], ['Spinning', '指定された番手と構造の糸に紡ぐ'], ['Winding', '糸を巻き取り、検査または製織工程に備える']],
+    spinningOutro: '各工程の管理は、糸の均一性、強度、総合的な品質に大きく関わり、製織効率と最終的な生地品質にも直結します。',
+    recycledTitle: '資源を有効活用する再生繊維',
+    recycledBody1: 'Thai Kuraboでは、適切な材料をCutting、Recycle、Carding、Blowroomの各工程で処理し、混紡糸に使用できる繊維へと再生します。',
+    recycledBody2: 'この取り組みは原料の選択肢を広げ、資源効率を考慮した繊維製品開発を支えます。配合率と糸の特性は、製品目的とお客様ごとの仕様に合わせて設定します。',
+    recycledAlt: 'Thai Kuraboの再生繊維準備工程',
+    sustainabilityLink: 'サステナビリティへの取り組みを見る',
+    weavingTitle: '織物製品',
+    weavingIntro: '綿、合成繊維、混紡、ストレッチ素材を用い、次のような多様な組織の織物を生産しています。',
+    weavingItems: [['Plain', '平滑で幅広い用途に使える基本的な平織組織'], ['Twill', '個性と耐久性を与える綾織組織'], ['Sateen', '滑らかな表面と上品な光沢を生み出す組織'], ['Dobby', '生地に柄や表面感を生み出す織組織'], ['Fancy Cloth', 'デザインコンセプトと用途に合わせて開発する特殊織物']],
+    weavingOutro: 'これらの織物は、シャツ、パンツ、ジャケット、デニム、ホームテキスタイルなど、組織の特性に応じたさまざまな製品に展開できます。',
+    weavingMainAlt: 'Thai Kuraboの糸と織物製品',
+    weavingProcessTitle: ['製織工程', '糸の準備から', '品質検査まで'],
+    weavingProcessIntro: '織物の生産は、主に5つの工程で構成されています。',
+    weavingSteps: [['Warping', '指定された本数と長さに経糸を準備する'], ['Sizing', '製織に適するよう経糸を糊付け・調整する'], ['Drawing', '経糸を織機の制御部に通して配置する'], ['Weaving', '設計された組織に従って経糸と緯糸を織り合わせる'], ['Inspecting', '次工程へ送る前に織り上がった生地を検査する']],
+    weavingProcessBody: '染色・仕上げ加工については、会社の生産工程情報に基づき、タイ国内のTTDFグループ会社と連携して対応できます。',
+    technologyLink: '技術について詳しく見る',
+    galleryLabel: '製織工程と品質検査の写真',
+    galleryAlts: ['Thai Kuraboで稼働する織機', 'Thai Kuraboの製織工程における機械設備', 'Thai Kuraboの織物品質検査'],
+    choiceTitle: '製品に適した繊維素材を選ぶ',
+    choiceBody1: '適切な糸や生地を選ぶには、繊維の種類、糸番手、生地重量、織組織、伸縮性、風合い、色、仕上げ、最終製品に必要な規格などを総合的に検討する必要があります。',
+    choiceBody2: 'Thai Kuraboのチームがお客様のご要望を伺い、製品コンセプトと生産工程に適した糸・織物をご提案します。',
+    faqTitle: 'よくあるご質問',
+    faqs: [
+      ['Thai Kuraboではどのような糸を生産していますか？', '綿糸、綿・合成繊維混紡糸のほか、Compact Yarn、Slub Yarn、Stretch Yarn、Siro Spun Yarn、Multiple Folded Yarn、Recycled Fiber Blended Yarnなどの特殊糸を生産しています。'],
+      ['どのような織物を生産していますか？', '綿、合成繊維、混紡、ストレッチ素材を用い、Plain、Twill、Sateen、Dobby、Fancy Clothなどの組織に対応しています。'],
+      ['特別仕様の生産について相談できますか？', '用途、繊維の種類、糸番手、織組織、必要な特性をご提示いただければ、適合性と生産可能性を検討します。'],
+      ['再生繊維を使用した製品はありますか？', 'Recycled Fiber Blended Yarnと再生繊維の準備工程があります。配合率や個別特性については、製品仕様に応じてお問い合わせください。'],
+    ],
+    ctaTitle: 'タイの糸・織物メーカーをお探しですか？',
+    ctaBody: '製品の詳細、技術特性、生産数量、共同開発の条件について、Thai Kuraboまでお問い合わせください。',
+    contact: 'お問い合わせ',
+  },
+} as const;
+
+function InternationalProductsPage({ locale }: { locale: 'en' | 'ja' }) {
+  const c = internationalProductContent[locale];
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: c.faqs.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })),
+  };
+
+  return (
+    <main id="main" className="products-page" lang={locale}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <section className="products-hero">
+        <div className="products-hero-copy technical-surface">
+          <p>THAI KURABO / {c.products}</p>
+          <h1>{c.heroTitle}</h1>
+          <p className="products-hero-lead">{c.heroLead}</p>
+        </div>
+        <div className="products-hero-image"><Image src="/images/products-spinning.png" alt={c.heroAlt} fill priority sizes="(max-width: 900px) 100vw, 46vw" /></div>
+      </section>
+
+      <nav className="breadcrumb" aria-label="Breadcrumb"><Link href={`/${locale}`}>{c.home}</Link><span>/</span><span>{c.products}</span></nav>
+
+      <article className="products-article">
+        <section className="products-intro products-shell"><p>{c.intro}</p></section>
+
+        <section className="products-section products-shell products-split">
+          <div>
+            <p className="products-eyebrow">SPINNING PRODUCTS</p><h2>{c.yarnTitle}</h2><p>{c.yarnIntro}</p>
+            <ul className="products-spec-list">{c.yarnItems.map(([title, body]) => <li key={title}><strong>{title}</strong><span>{body}</span></li>)}</ul>
+            <p>{c.yarnOutro}</p>
+          </div>
+          <figure className="products-sticky-media"><Image src="/images/products-winding-thread.jpg" alt={c.windingAlt} width={1536} height={1024} sizes="(max-width: 900px) 100vw, 42vw" /></figure>
+        </section>
+
+        <section className="products-section products-process-section"><div className="products-shell">
+          <p className="products-eyebrow">SPINNING PROCESS</p><h2>{c.spinningTitle}</h2><p>{c.spinningIntro}</p>
+          <ol className="products-process-grid">{c.spinningSteps.map(([title, body]) => <li key={title}><strong>{title}</strong><span>{body}</span></li>)}</ol>
+          <p>{c.spinningOutro}</p>
+        </div></section>
+
+        <section className="products-section products-shell products-split products-split-reverse">
+          <figure className="products-sticky-media"><Image src="/images/products-process-recycled-fiber.png" alt={c.recycledAlt} width={3508} height={2480} sizes="(max-width: 900px) 100vw, 42vw" /></figure>
+          <div><p className="products-eyebrow">RECYCLED FIBER</p><h2>{c.recycledTitle}</h2><p>{c.recycledBody1}</p><p>{c.recycledBody2}</p><Link className="products-text-link" href={`/${locale}/sustainability`}>{c.sustainabilityLink} <ArrowIcon /></Link></div>
+        </section>
+
+        <section className="products-section products-weaving-section"><div className="products-shell products-split">
+          <div><p className="products-eyebrow">WEAVING PRODUCTS</p><h2>{c.weavingTitle}</h2><p>{c.weavingIntro}</p><ul className="products-spec-list">{c.weavingItems.map(([title, body]) => <li key={title}><strong>{title}</strong><span>{body}</span></li>)}</ul><p>{c.weavingOutro}</p></div>
+          <figure className="products-sticky-media"><Image src="/images/products-main-production.png" alt={c.weavingMainAlt} width={3508} height={2480} sizes="(max-width: 900px) 100vw, 42vw" /></figure>
+        </div></section>
+
+        <section className="products-section products-shell">
+          <p className="products-eyebrow">WEAVING PROCESS</p><h2>{c.weavingProcessTitle[0]}<br />{c.weavingProcessTitle[1]}<br />{c.weavingProcessTitle[2]}</h2><p>{c.weavingProcessIntro}</p>
+          <ol className="products-process-grid products-process-five">{c.weavingSteps.map(([title, body]) => <li key={title}><strong>{title}</strong><span>{body}</span></li>)}</ol>
+          <p>{c.weavingProcessBody}</p><Link className="products-text-link" href={`/${locale}/technology`}>{c.technologyLink} <ArrowIcon /></Link>
+          <div className="products-weaving-gallery" aria-label={c.galleryLabel}>
+            <figure><Image src="/images/products-weaving-machine.png" alt={c.galleryAlts[0]} width={1536} height={1024} sizes="(max-width: 900px) 100vw, 33vw" /></figure>
+            <figure><Image src="/images/products-weaving-machine-2.png" alt={c.galleryAlts[1]} width={1536} height={1024} sizes="(max-width: 900px) 100vw, 33vw" /></figure>
+            <figure><Image src="/images/products-weaving-inspection.jpg" alt={c.galleryAlts[2]} width={1536} height={1024} sizes="(max-width: 900px) 100vw, 33vw" /></figure>
+          </div>
+        </section>
+
+        <section className="products-section products-choice-section"><div className="products-shell products-choice-grid"><div><p className="products-eyebrow">MATERIAL SELECTION</p><h2>{c.choiceTitle}</h2></div><div><p>{c.choiceBody1}</p><p>{c.choiceBody2}</p></div></div></section>
+
+        <section className="products-section products-shell products-faq" aria-labelledby={`${locale}-products-faq-title`}><p className="products-eyebrow">FAQ</p><h2 id={`${locale}-products-faq-title`}>{c.faqTitle}</h2><div className="products-faq-list">{c.faqs.map(([question, answer]) => <details key={question}><summary>{question}</summary><p>{answer}</p></details>)}</div></section>
+
+        <section className="products-cta"><div className="products-shell"><p className="products-eyebrow">CONTACT THAI KURABO</p><h2>{c.ctaTitle}</h2><p>{c.ctaBody}</p><Link href={`/${locale}/contact`}>{c.contact} <ArrowIcon /></Link></div></section>
+      </article>
+    </main>
+  );
+}
+
 function LeadershipSection() {
   return (
     <section className="leadership-section" aria-labelledby="leadership-title">
@@ -592,11 +772,11 @@ export function PublicInnerPage({ locale, slug }: { locale: Locale; slug: string
     );
   }
 
-  if (slug === 'products' && locale === 'th') {
+  if (slug === 'products') {
     return (
       <>
         <SiteHeader locale={locale} />
-        <ThaiProductsPage />
+        {locale === 'th' ? <ThaiProductsPage /> : <InternationalProductsPage locale={locale} />}
         <SiteFooter locale={locale} />
       </>
     );
