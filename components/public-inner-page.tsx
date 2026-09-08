@@ -6,6 +6,7 @@ import { CookiePolicy } from '@/components/cookie-policy';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import { companyContent } from '@/lib/company-page-content';
+import { getNewsPageContent } from '@/lib/news-page-content';
 import { copy, type Locale } from '@/lib/site-data';
 import { getPublishedJobs } from '@/lib/data/jobs';
 
@@ -133,16 +134,6 @@ const pageData: Record<string, PageInfo> = {
     visuals: [
       { src: '/images/sustainability-overview.png', alt: 'Overview of Thai Kurabo facilities and environmental initiatives' },
       { src: '/images/sustainability-values.png', alt: 'Thai Kurabo sustainability values and commitments' },
-    ],
-  },
-  news: {
-    title: 'Updates from Thai Kurabo.',
-    lead: 'Company information, technology stories, and sustainability updates in one place.',
-    image: '/images/news-yarn-detail.png',
-    imageAlt: 'Yarn moving through precision textile machinery',
-    visuals: [
-      { src: '/images/news-factory-aerial.png', alt: 'Aerial view of textile manufacturing facilities' },
-      { src: '/images/news-spindle-detail.png', alt: 'Close view of spinning equipment and yarn spindles' },
     ],
   },
   careers: {
@@ -750,7 +741,8 @@ function SustainabilityPage({ locale }: { locale: Locale }) {
 
 export function PublicInnerPage({ locale, slug }: { locale: Locale; slug: string }) {
   const t = copy[locale];
-  const data: PageInfo = pageData[slug] ?? { title: 'Content in preparation', lead: 'This page is part of the approved sitemap and is ready for final content.' };
+  const newsContent = slug === 'news' ? getNewsPageContent(locale) : undefined;
+  const data: PageInfo = newsContent ?? pageData[slug] ?? { title: 'Content in preparation', lead: 'This page is part of the approved sitemap and is ready for final content.' };
 
   if (slug === 'company') {
     return (
@@ -785,19 +777,19 @@ export function PublicInnerPage({ locale, slug }: { locale: Locale; slug: string
   return (
     <>
       <SiteHeader locale={locale} />
-      <main id="main" className="inner-page">
+      <main id="main" className={`inner-page${slug === 'news' ? ' news-page' : ''}`} lang={locale}>
         <section className="inner-hero">
-          <div className="inner-hero-copy technical-surface"><p>THAI KURABO / {slug.toUpperCase()}</p><h1>{data.title}</h1><p className="inner-lead">{data.lead}</p></div>
+          <div className="inner-hero-copy technical-surface"><p>{newsContent?.eyebrow ?? `THAI KURABO / ${slug.toUpperCase()}`}</p><h1>{data.title}</h1><p className="inner-lead">{data.lead}</p></div>
           {data.image && <div className="inner-hero-image"><Image src={data.image} alt={data.imageAlt ?? ''} fill sizes="(max-width: 800px) 100vw, 48vw" /></div>}
         </section>
-        <nav className="breadcrumb" aria-label="Breadcrumb"><Link href={`/${locale}`}>Home</Link><span>/</span><span>{slug}</span></nav>
+        <nav className="breadcrumb" aria-label="Breadcrumb"><Link href={`/${locale}`}>{newsContent?.breadcrumbHome ?? 'Home'}</Link><span>/</span><span>{newsContent?.breadcrumbCurrent ?? slug}</span></nav>
         <section className="inner-content section-shell">
           {slug === 'contact' ? <ContactPreview /> : (
             <>
               {slug === 'careers' ? <CareersPreview locale={locale} /> : slug === 'cookies' ? <CookiePolicy locale={locale} /> : (
                 <div className="editorial-copy">
-                  <h2>{slug === 'company' ? t.storyTitle : slug === 'technology' ? t.innovationTitle : data.title}</h2>
-                  <div><p>{data.lead}</p><p>Final verified copy, detailed specifications, and downloadable resources will be connected through the CMS in a later phase. The current interface establishes the responsive content hierarchy and multilingual layout.</p></div>
+                  <h2>{newsContent?.sectionTitle ?? (slug === 'company' ? t.storyTitle : slug === 'technology' ? t.innovationTitle : data.title)}</h2>
+                  <div><p>{data.lead}</p><p>{newsContent?.body ?? 'Final verified copy, detailed specifications, and downloadable resources will be connected through the CMS in a later phase. The current interface establishes the responsive content hierarchy and multilingual layout.'}</p></div>
                 </div>
               )}
               {slug === 'company' && <DocumentGallery id="company-profile-title" title="Company profile" items={companyDocuments} />}
