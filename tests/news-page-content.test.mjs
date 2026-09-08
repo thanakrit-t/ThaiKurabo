@@ -20,7 +20,7 @@ test('returns localized navigation and headings for Thai, English, and Japanese'
       return [content.title, content.breadcrumbHome, content.breadcrumbCurrent];
     }),
     [
-      ['ข่าวสารจากไทยคุราโบ', 'หน้าแรก', 'ข่าวสาร'],
+      ['ข่าวสารจากไทยคูราโบ', 'หน้าแรก', 'ข่าวสาร'],
       ['News from Thai Kurabo', 'Home', 'News'],
       ['タイ・クラボからのお知らせ', 'ホーム', 'ニュース'],
     ],
